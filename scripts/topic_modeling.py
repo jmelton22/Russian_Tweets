@@ -26,13 +26,16 @@ def main():
                          header=0,
                          parse_dates=['date'])
     print('Reading in tweets')
-    tweets = list(tweets.clean_text.dropna())[:10000]
-    # Remove stop words
+    # Drop tweets reduced to NaN by preprocessing
+    tweets = list(tweets.clean_text.dropna())[:10000]  # Limit to 10,000 tweets for testing
+
+    # Tokenize tweets and remove stop words
     stop_words = set(stopwords.words('english'))
     print('Tokenizing and removing stop words')
     tweets = [[word for word in word_tokenize(tweet)
                if word not in stop_words]
               for tweet in tweets]
+
     nlp = spacy.load('en', disable=['parser', 'ner'])
 
     def lemmatization(texts, allowed_postags=('NOUN', 'ADJ', 'VERB', 'ADV')):
@@ -55,7 +58,7 @@ def main():
 
     def score_models(dictionary, corpus, texts, limit, start=2, step=3):
         """
-        Compute c_v coherence scores for LDA models with various numbers of topics
+        Compute c_v coherence scores and log perplexity values for LDA models with various numbers of topics
 
         :param dictionary: Gensim dictionary
         :param corpus: Gensim corpus
@@ -63,8 +66,8 @@ def main():
         :param limit: Max num of topics
         :return:
             model_list: List of LDA topic models
-            coherences: Coherence values corresponding to LDA model by number of topics
-            log_perplexities: Log perplexity values corresponding to LDA model by number of topics
+            coherences: Coherence values for each LDA model by number of topics
+            log_perplexities: Log perplexity valuess for each LDA model by number of topics
         """
         model_list, coherences, log_perplexities = [], [], []
         for num_topics in range(start, limit, step):

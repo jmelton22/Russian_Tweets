@@ -6,7 +6,6 @@ import seaborn as sns
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource
 
-sns.set(style='whitegrid')
 tweets = pd.read_csv('../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])

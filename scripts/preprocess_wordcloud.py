@@ -11,18 +11,17 @@ print(tweets.isna().sum())
 print()
 
 tweets.drop(['user_id', 'created_at', 'retweet_count', 'retweeted',
-             'favorite_count', 'source', 'expanded_urls',
-             'posted', 'retweeted_status_id', 'in_reply_to_status_id'],
+             'favorite_count', 'source', 'expanded_urls', 'posted',
+             'retweeted_status_id', 'in_reply_to_status_id'],
             axis=1, inplace=True)
 
 # Remove rows with NaN text field
 tweets = tweets[pd.notnull(tweets['text'])]
-
+tweets.reset_index(drop=True, inplace=True)
 tweets.rename(columns={'created_str': 'date'}, inplace=True)
 
 tweets.info()
 print()
-print('Unique account ids:', len(tweets.user_id.unique()))
 print('Unique account keys:', len(tweets.user_key.unique()))
 print('Unique hashtags:', len(tweets.hashtags.unique()))
 print()
@@ -90,6 +89,6 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
 
-fig.savefig('../visuals/wordcloud.png')
+# fig.savefig('../visuals/wordcloud.png')
 
 tweets.to_csv('../tweets/tweets_clean.csv', index=False, quoting=csv.QUOTE_ALL)
