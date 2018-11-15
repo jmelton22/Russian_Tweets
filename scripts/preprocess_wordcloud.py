@@ -33,11 +33,12 @@ print(tweets.groupby(['hashtags']).size().sort_values(ascending=False).head(10))
 def clean_text(text):
     from bs4 import BeautifulSoup
 
+    # TODO: Remove German tweets?
+
     # Remove URLs
-    link_exp = r'https?://.*[\r\n]*'
     www_exp = r'www.[^ ]+'
-    http_exp = r'https?'
-    clean = re.sub('|'.join((link_exp, www_exp, http_exp)), '', text)
+    http_exp = r'http?s?[^\s]+'
+    clean = re.sub('|'.join(( www_exp, http_exp)), '', text)
 
     # Remove HTML encoded text (ampersand)
     soup = BeautifulSoup(clean, 'lxml')
@@ -67,9 +68,9 @@ def clean_text(text):
 
     # TODO: add 'don' to removal? (Should be removed in contraction handling)
 
-    # Remove non-letter chars, 'RT' from retweets, enclitics from split contractions
+    # Remove non-letter chars, 'RT'/'MT' from retweets, enclitics from split contractions
     clean = re.sub('[^a-zA-Z]', ' ', clean)
-    tails = [r'\bRT\b', r'\bve\b', r'\bre\b', r'\bll\b']
+    tails = [r'\bRT\b', r'\bMT\b', r'\bve\b', r'\bre\b', r'\bll\b']
     clean = re.sub('|'.join(tails), '', clean)
     # Convert to lower case
     clean = clean.lower()
@@ -89,6 +90,6 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
 
-# fig.savefig('../visuals/wordcloud.png')
+fig.savefig('../visuals/wordcloud.png')
 
 tweets.to_csv('../tweets/tweets_clean.csv', index=False, quoting=csv.QUOTE_ALL)
