@@ -10,7 +10,7 @@ tweets = pd.read_csv('../tweets/tweets.csv', header=0)
 print(tweets.isna().sum())
 print()
 
-tweets.drop(['created_at', 'retweet_count', 'retweeted',
+tweets.drop(['user_id', 'created_at', 'retweet_count', 'retweeted',
              'favorite_count', 'source', 'expanded_urls',
              'posted', 'retweeted_status_id', 'in_reply_to_status_id'],
             axis=1, inplace=True)
@@ -22,11 +22,10 @@ tweets.rename(columns={'created_str': 'date'}, inplace=True)
 
 tweets.info()
 print()
-print('Unique accounts:', len(tweets.user_id.unique()))
-print('Unique accounts:', len(tweets.user_key.unique()))
+print('Unique account ids:', len(tweets.user_id.unique()))
+print('Unique account keys:', len(tweets.user_key.unique()))
 print('Unique hashtags:', len(tweets.hashtags.unique()))
 print()
-
 print(tweets.groupby(['user_key']).size().sort_values(ascending=False).head(10))
 print()
 print(tweets.groupby(['hashtags']).size().sort_values(ascending=False).head(10))
