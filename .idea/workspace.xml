@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/sklearn_topic_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/preprocess_wordcloud.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/preprocess_wordcloud.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/hashtag_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/hashtag_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_mallet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/corpus.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/corpus.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/dictionary.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/dictionary.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/lemmas.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/lemmas.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/tweets_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/tweets_clean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/top_hashtags.html" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/top_hashtags.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/wordcloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/wordcloud.png" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -66,12 +53,12 @@
           <entry key="dummy" value="29" />
           <entry key="gitignore" value="24" />
           <entry key="py" value="17188" />
-          <entry key="txt" value="178" />
+          <entry key="txt" value="277" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="231" />
+          <entry key="PLAIN_TEXT" value="330" />
           <entry key="Python" value="17303" />
         </counts>
       </usages-collector>
@@ -91,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/sklearn_topic_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="595">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -133,6 +120,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -411,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542555880265</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added removal of some German tweets to preprocessing.&#10;Added sklearn topic modeling">
+      <created>1542603804581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542603804581</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -427,7 +422,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19233312" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19233312" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -439,7 +434,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3261745" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32971507" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -454,7 +449,8 @@
     <MESSAGE value="Clean up some formatting" />
     <MESSAGE value="Fixed URL handling in text preprocessing" />
     <MESSAGE value="Added LDA model preprocess and testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added LDA model preprocess and testing" />
+    <MESSAGE value="Added removal of some German tweets to preprocessing.&#10;Added sklearn topic modeling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added removal of some German tweets to preprocessing.&#10;Added sklearn topic modeling" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/preprocess_wordcloud.py" />
@@ -572,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sklearn_topic_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="595">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
