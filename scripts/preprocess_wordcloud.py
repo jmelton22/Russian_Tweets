@@ -3,6 +3,7 @@
 import pandas as pd
 import re
 import csv
+import ast
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
@@ -29,11 +30,15 @@ print(tweets.groupby(['user_key']).size().sort_values(ascending=False).head(10))
 print()
 print(tweets.groupby(['hashtags']).size().sort_values(ascending=False).head(10))
 
+# Remove some German tweets (ways to remove others?)
+# TODO: Better way than iterating over rows individually? (write function and df.apply()?)
+for i, row in tweets.iterrows():
+    if 'MerkelMussBleiben' in ast.literal_eval(row['hashtags']):
+        tweets.drop(i, inplace=True)
+
 
 def clean_text(text):
     from bs4 import BeautifulSoup
-
-    # TODO: Remove German tweets?
 
     # Remove URLs
     www_exp = r'www.[^ ]+'

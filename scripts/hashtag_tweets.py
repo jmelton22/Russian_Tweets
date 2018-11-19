@@ -12,12 +12,15 @@ from bokeh.models import HoverTool, ColumnDataSource, Range1d
 tweets = pd.read_csv('../tweets/tweets.csv', header=0)
 
 # Get a list of all hashtags from pandas column containing a list of hashtags per tweet
-hashtags = [tag for tag_list in tweets.hashtags for tag in ast.literal_eval(tag_list)]
+hashtags = [tag for tag_list in tweets.hashtags for tag in ast.literal_eval(tag_list) if tag != 'MerkelMussBleiben']
 
 # Create df containing the counts of each hashtag
 hashtag_df = pd.DataFrame.from_dict(Counter(hashtags),
                                     orient='index',
                                     columns=['counts']).sort_values(by='counts', ascending=False)
+
+for i, row in hashtag_df.iterrows():
+    print(row.index, ':', row.counts)
 
 
 def hashtag_counts(tweets_df, num_hashtags=15):

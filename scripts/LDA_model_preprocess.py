@@ -20,7 +20,7 @@ tweets = pd.read_csv('../tweets/tweets_clean.csv',
                      parse_dates=['date'])
 print('Reading in tweets')
 # Drop tweets reduced to NaN by preprocessing
-tweets = list(tweets.clean_text.dropna())
+tweets = list(tweets.clean_text.dropna().unique())
 
 # Tokenize tweets and remove stop words
 stop_words = set(stopwords.words('english'))
@@ -48,17 +48,14 @@ tweet_lemmas = lemmatization(tweets)
 with open('./topic_modeling_objects/lemmas.pkl', 'wb') as f_out:
     pickle.dump(tweet_lemmas, f_out)
 
-print('Fitting Dictionary')
+print('Making Dictionary')
 id2word = corpora.Dictionary(tweet_lemmas)
 # Save Dictionary to pickle file
 id2word.save('./topic_modeling_objects/dictionary.pkl')
 
 print('Converting docs to bags of words corpus')
 corpus = [id2word.doc2bow(tweet) for tweet in tweet_lemmas]
-print()
 
 # Save corpus to pickle file
 with open('./topic_modeling_objects/corpus.pkl', 'wb') as f_out:
     pickle.dump(corpus, f_out)
-
-
