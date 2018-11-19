@@ -43,7 +43,7 @@ def clean_text(text):
     # Remove URLs
     www_exp = r'www.[^ ]+'
     http_exp = r'http?s?[^\s]+'
-    clean = re.sub('|'.join(( www_exp, http_exp)), '', text)
+    clean = re.sub('|'.join((www_exp, http_exp)), '', text)
 
     # Remove HTML encoded text (ampersand)
     soup = BeautifulSoup(clean, 'lxml')

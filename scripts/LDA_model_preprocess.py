@@ -20,14 +20,15 @@ tweets = pd.read_csv('../tweets/tweets_clean.csv',
                      parse_dates=['date'])
 print('Reading in tweets')
 # Drop tweets reduced to NaN by preprocessing
-tweets = list(tweets.clean_text.dropna().unique())
+tweet_text_df = tweets[['date', 'text', 'clean_text']]
+tweet_text_df.dropna(subset=['clean_text'], inplace=True)
+tweet_text = list(tweet_text_df.clean_text)
 
 # Tokenize tweets and remove stop words
 stop_words = set(stopwords.words('english'))
 print('Tokenizing and removing stop words')
-tweets = [[word for word in word_tokenize(tweet)
-           if word not in stop_words]
-          for tweet in tweets]
+tweet_text = [[word for word in word_tokenize(tweet) if word not in stop_words]
+              for tweet in tweet_text]
 
 nlp = spacy.load('en', disable=['parser', 'ner'])
 
@@ -42,7 +43,8 @@ def lemmatization(texts, allowed_postags=('NOUN', 'ADJ', 'VERB', 'ADV')):
     return lemmas
 
 
-tweet_lemmas = lemmatization(tweets)
+tweet_lemmas = lemmatization(tweet_text)
+tweet_text_df['lemmas'] = [' '.join(words) for words in tweet_lemmas]
 
 # Save tweet lemmas to pickle file
 with open('./topic_modeling_objects/lemmas.pkl', 'wb') as f_out:
@@ -59,3 +61,5 @@ corpus = [id2word.doc2bow(tweet) for tweet in tweet_lemmas]
 # Save corpus to pickle file
 with open('./topic_modeling_objects/corpus.pkl', 'wb') as f_out:
     pickle.dump(corpus, f_out)
+
+tweet_text_df.to_csv('../tweets/tweets_text.csv', index=False)
