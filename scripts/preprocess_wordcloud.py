@@ -17,7 +17,7 @@ tweets.drop(['user_id', 'created_at', 'retweet_count', 'retweeted',
             axis=1, inplace=True)
 
 # Remove rows with NaN text field
-tweets = tweets[pd.notnull(tweets['text'])]
+tweets.dropna(subset=['text'], inplace=True)
 tweets.reset_index(drop=True, inplace=True)
 tweets.rename(columns={'created_str': 'date'}, inplace=True)
 
@@ -32,9 +32,9 @@ print(tweets.groupby(['hashtags']).size().sort_values(ascending=False).head(10))
 
 # Remove some German tweets (ways to remove others?)
 # TODO: Better way than iterating over rows individually? (write function and df.apply()?)
-for i, row in tweets.iterrows():
-    if 'MerkelMussBleiben' in ast.literal_eval(row['hashtags']):
-        tweets.drop(i, inplace=True)
+# for i, row in tweets.iterrows():
+#     if 'MerkelMussBleiben' or 'JugendmitMerkel' in ast.literal_eval(row['hashtags']):
+#         tweets.drop(i, inplace=True)
 
 
 def clean_text(text):
@@ -67,11 +67,9 @@ def clean_text(text):
     clean = contraction_exp.sub(lambda x: contraction_dict[x.group()], clean)
 
     # Remove @ mentions and hashtags
-    at_exp = r'@[A-Za-z0-9_]+'
-    hashtag_exp = r'#[A-Za-z0-9_]+'
-    clean = re.sub('|'.join((at_exp, hashtag_exp)), '', clean)
-
-    # TODO: add 'don' to removal? (Should be removed in contraction handling)
+    # at_exp = r'@[A-Za-z0-9_]+'
+    # hashtag_exp = r'#[A-Za-z0-9_]+'
+    # clean = re.sub('|'.join((at_exp, hashtag_exp)), '', clean)
 
     # Remove non-letter chars, 'RT'/'MT' from retweets, enclitics from split contractions
     clean = re.sub('[^a-zA-Z]', ' ', clean)
@@ -80,7 +78,7 @@ def clean_text(text):
     # Convert to lower case
     clean = clean.lower()
 
-    return " ".join([word for word in clean.split(" ") if word is not ''])
+    return ' '.join([word for word in clean.split(' ') if word is not ''])
 
 
 tweets['clean_text'] = tweets['text'].apply(clean_text)

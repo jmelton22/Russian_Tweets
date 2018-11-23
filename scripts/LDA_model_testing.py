@@ -16,7 +16,7 @@ from gensim.models import CoherenceModel
 import matplotlib.pyplot as plt
 
 
-def main():
+if __name__ == "__main__":
     # Load lemmatized tweets
     with open('./topic_modeling_objects/lemmas.pkl', 'rb') as f:
         tweet_lemmas = pickle.load(f)
@@ -107,7 +107,3 @@ def main():
     optimal_model = models[coherences.index(max(coherences))]
     model_topics = optimal_model.show_topics()
     pprint(model_topics)
-
-
-if __name__ == "__main__":
-    main()
