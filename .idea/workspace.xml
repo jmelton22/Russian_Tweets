@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/daily_tweets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_NMF.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_NMF.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visuals/sklearn_LDA_scores.png" afterDir="false" />
+    <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="Added hashtags and mentions back in (were removed in preprocessing). Added pipeline for testing LDA model parameters. Updated sklearn LDA and NMF models.">
+      <change afterPath="$PROJECT_DIR$/scripts/cross_validation_results.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/cv_scores.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_model_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/LDA_model_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/corpus.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/corpus.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/dictionary.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/dictionary.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/lemmas.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/lemmas.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/tweets_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/tweets_clean.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/tweets_text.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/tweets_text.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/wordcloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/wordcloud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/sklearn_LDA_scores.png" beforeDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -31,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="278">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -46,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/LDA_model_testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="109" selection-start-line="109" selection-end-line="109" />
+            <state relative-caret-position="1088">
+              <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -55,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/sklearn_gensim_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="697">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -67,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="527">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
@@ -76,13 +68,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/sklearn_NMF_model.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/cross_validation_results.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="278">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
-                <element signature="e#24#43#0" expanded="true" />
+                <element signature="e#24#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,18 +135,19 @@
         <option value="$PROJECT_DIR$/scripts/sklearn_LDA_testing.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_NMF_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_model_testing.py" />
-        <option value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
-        <option value="$PROJECT_DIR$/scripts/cv_test.py" />
-        <option value="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" />
-        <option value="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" />
+        <option value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
+        <option value="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" />
+        <option value="$PROJECT_DIR$/scripts/cv_test.py" />
+        <option value="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" />
+        <option value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -221,7 +214,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sklearn_NMF_model">
+  <component name="RunManager" selected="Python.sklearn_LDA_model">
     <configuration name="Russian_Tweets" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,7 +232,7 @@
       <option name="ipnbPort" value="8888" />
       <method v="2" />
     </configuration>
-    <configuration name="LDA_model_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cross_validation_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -251,7 +244,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,28 +265,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/cv_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="preprocess_wordcloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Russian_Tweets" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
+      <option name="SCRIPT_NAME" value="D:\jmelt\Documents\UNCC\ITIS4510\Russian_Tweets\scripts\cross_validation_results.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -323,7 +295,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sklearn_NMF_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sklearn_LDA_pipeline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,7 +307,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sklearn_gensim_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Russian_Tweets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -348,17 +341,17 @@
       <item itemvalue="Jupyter Notebook.Russian_Tweets" />
       <item itemvalue="Python.cv_test" />
       <item itemvalue="Python.sklearn_LDA_model" />
-      <item itemvalue="Python.preprocess_wordcloud" />
-      <item itemvalue="Python.LDA_model_preprocess" />
-      <item itemvalue="Python.sklearn_NMF_model" />
+      <item itemvalue="Python.sklearn_gensim_test" />
+      <item itemvalue="Python.sklearn_LDA_pipeline" />
+      <item itemvalue="Python.cross_validation_results" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sklearn_NMF_model" />
         <item itemvalue="Python.sklearn_LDA_model" />
+        <item itemvalue="Python.cross_validation_results" />
+        <item itemvalue="Python.sklearn_LDA_pipeline" />
         <item itemvalue="Python.cv_test" />
-        <item itemvalue="Python.LDA_model_preprocess" />
-        <item itemvalue="Python.preprocess_wordcloud" />
+        <item itemvalue="Python.sklearn_gensim_test" />
       </list>
     </recent_temporary>
   </component>
@@ -422,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542655326972</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added hashtags and mentions back in (were removed in preprocessing). Added pipeline for testing LDA model parameters. Updated sklearn LDA and NMF models.">
+      <created>1543012821117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543012821117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -438,12 +438,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22405817" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21414408" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4839142" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42627347" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986577" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,13 +464,11 @@
     <MESSAGE value="Added LDA model preprocess and testing" />
     <MESSAGE value="Added removal of some German tweets to preprocessing.&#10;Added sklearn topic modeling" />
     <MESSAGE value="Fixed sklearn topic modeling. Removed NaNs introduced by preprocessing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed sklearn topic modeling. Removed NaNs introduced by preprocessing" />
+    <MESSAGE value="Added hashtags and mentions back in (were removed in preprocessing). Added pipeline for testing LDA model parameters. Updated sklearn LDA and NMF models." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added hashtags and mentions back in (were removed in preprocessing). Added pipeline for testing LDA model parameters. Updated sklearn LDA and NMF models." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/preprocess_wordcloud.py" />
-    <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -531,9 +529,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tweets/tweets_lemmas.csv" />
     <entry file="file://$PROJECT_DIR$/scripts/test.py" />
-    <entry file="file://$PROJECT_DIR$/visuals/LDA_model_scores.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/monthly_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -555,16 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess_wordcloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -573,33 +558,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_testing2.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc.csv" />
     <entry file="file://$PROJECT_DIR$/tweets/tweets_text.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="-1173" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visuals/sklearn_LDA_scores.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/cv_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic.csv" />
     <entry file="file://$PROJECT_DIR$/scripts/sklearn_NMF_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -633,10 +598,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sklearn_gensim_test.py">
+    <entry file="file://$PROJECT_DIR$/scripts/sklearn_NMF_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="235">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_NMF.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/sklearn_LDA_scores.png" />
+    <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess_wordcloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
@@ -645,14 +636,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="1088">
+          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py">
+    <entry file="file://$PROJECT_DIR$/scripts/sklearn_gensim_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="697">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
@@ -660,22 +651,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sklearn_NMF_model.py">
+    <entry file="file://$PROJECT_DIR$/visuals/LDA_model_scores.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="278">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_model.py">
+    <entry file="file://$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="527">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/cv_scores.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/cross_validation_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

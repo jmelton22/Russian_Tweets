@@ -28,6 +28,7 @@ print('Perplexity: {:.3f}'.format(lda_model.perplexity(tf)))
 print('Log likelihood: {:.3f}'.format(lda_model.score(tf)))
 print()
 
+# Save fitted model
 with open('./topic_modeling_objects/sklearn_LDA_model.joblib', 'wb') as f_out:
     joblib.dump(lda_model, f_out)
 
@@ -48,12 +49,13 @@ def display_topics(H, W, feature_names, orig_docs, n_words=15, n_docs=25):
         print('-' * 80)
 
 
-display_topics(lda_H, lda_W, tf_names, tweet_orig, n_words=25, n_docs=50)
+display_topics(lda_H, lda_W, tf_names, tweet_orig, n_words=20)
 
-# Create df with the topic probabilities (cols) for each doc (rows)
 topic_names = ['Topic' + str(i) for i in range(len(lda_model.components_))]
 doc_names = ['Doc' + str(i) for i in range(len(tweet_docs))]
+word_names = ['Word ' + str(i) for i in range(len(tf_names))]
 
+# Create df with the topic probabilities (cols) for each doc (rows)
 doc_topic_df = pd.DataFrame(np.round(lda_W, 2), columns=topic_names, index=doc_names)
 
 # Add column with dominant topic for each doc
@@ -63,8 +65,27 @@ print(doc_topic_df.head(25))
 # Create df with document topic distribution (num docs per topic)
 topic_dist_df = doc_topic_df['dominant_topic'].value_counts().reset_index(name='Num docs')
 topic_dist_df.columns = ['Topic_num', 'Num_docs']
+topic_dist_df['Proportion'] = topic_dist_df.Num_docs.apply(lambda x: x / len(tweet_docs))
 print()
 print(topic_dist_df)
 
-doc_topic_df.to_csv('./topic_modeling_objects/topics_per_doc_LDA.csv', index=False)
+
+def top_keywords(feature_names, H):
+    keywords = np.array(feature_names)
+    topic_keywords = []
+    for weights in H:
+        topic_keywords_locs = (-weights).argsort()
+        topic_keywords.append(keywords.take(topic_keywords_locs))
+
+    return pd.DataFrame(topic_keywords)
+
+
+# Create df with top words (cols) per topic (rows)
+topic_words_df = top_keywords(tf_names, lda_H)
+topic_words_df.columns = word_names
+topic_words_df.index = topic_names
+print(topic_words_df.iloc[:, :5])
+
+doc_topic_df.to_csv('./topic_modeling_objects/topics_per_doc_LDA.csv', index=True)
 topic_dist_df.to_csv('./topic_modeling_objects/docs_per_topic_LDA.csv', index=False)
+topic_words_df.to_csv('./topic_modeling_objects/words_per_topic_LDA.csv', index=True)

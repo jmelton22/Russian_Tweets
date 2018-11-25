@@ -18,7 +18,7 @@ pipeline = Pipeline([('vect', CountVectorizer(max_df=0.95,
                      ('lda', LatentDirichletAllocation(max_iter=10,
                                                        learning_method='online'))])
 params = {'lda__learning_decay': (0.5, 0.7, 0.9),
-          'lda__n_components': (5, 10, 15, 20, 25, 30),
+          'lda__n_components': (2, 5, 10, 15, 20, 25, 30, 35),
           # 'vect__max_features': (None, 50000, 100000),
           # 'vect__max_df': (0.5, 0.75, 0.95),
           # 'vect__min_df': (0, 10, 100)
@@ -26,7 +26,7 @@ params = {'lda__learning_decay': (0.5, 0.7, 0.9),
 
 if __name__ == '__main__':
     grid_search = GridSearchCV(pipeline, params,
-                               cv=5, n_jobs=-1, verbose=3)
+                               cv=5, n_jobs=-1, verbose=2)
     print('Performing grid search')
     print('Pipeline:', [name for name, _ in pipeline.steps])
     print('Parameters:')
