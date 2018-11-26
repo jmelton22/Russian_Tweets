@@ -81,7 +81,12 @@ def clean_text(text):
     return ' '.join([word for word in clean.split(' ') if word is not ''])
 
 
+def find_hashtags(text):
+    return re.findall('#(\w+)', text)
+
+
 tweets['clean_text'] = tweets['text'].apply(clean_text)
+tweets['hashtags'] = tweets['text'].apply(find_hashtags)
 
 # Generate word cloud
 tweet_text = tweets.clean_text.str.cat(sep=' ')

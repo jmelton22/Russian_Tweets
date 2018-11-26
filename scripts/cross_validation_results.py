@@ -17,21 +17,13 @@ for _, row in results.sort_values(by='rank_test_score').iterrows():
         print('{}: {}'.format(k, v))
     print()
 
-# TODO: better way than iterrows, groupby using 'param_lda__learning_decay' column?
-
 num_topics = [2, 5, 10, 15, 20, 25, 30, 35]
-scores_5, scores_7, scores_9 = [], [], []
-std_5, std_7, std_9 = [], [], []
-for _, row in results.iterrows():
-    if row['params']['lda__learning_decay'] == 0.5:
-        scores_5.append(row['mean_test_score'])
-        std_5.append(row['std_test_score'])
-    elif row['params']['lda__learning_decay'] == 0.7:
-        scores_7.append(row['mean_test_score'])
-        std_7.append(row['std_test_score'])
-    else:
-        scores_9.append(row['mean_test_score'])
-        std_9.append(row['std_test_score'])
+scores_5 = results.loc[results['param_lda__learning_decay'] == 0.5, 'mean_test_score']
+std_5 = results.loc[results['param_lda__learning_decay'] == 0.5, 'std_test_score']
+scores_7 = results.loc[results['param_lda__learning_decay'] == 0.7, 'mean_test_score']
+std_7 = results.loc[results['param_lda__learning_decay'] == 0.7, 'std_test_score']
+scores_9 = results.loc[results['param_lda__learning_decay'] == 0.9, 'mean_test_score']
+std_9 = results.loc[results['param_lda__learning_decay'] == 0.9, 'std_test_score']
 
 fig = plt.figure(figsize=(10, 6))
 

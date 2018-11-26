@@ -10,8 +10,8 @@ tweets = pd.read_csv('../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'],
                      index_col='date')
-tweets = tweets.loc['2016-07-01': '2017-03-31']
-daily_tweets = tweets.groupby(tweets.index.date).size().to_frame('counts')
+tweets_subset = tweets.loc['2016-07-01': '2017-03-31']
+daily_tweets = tweets_subset.groupby(tweets_subset.index.date).size().to_frame('counts')
 
 
 def daily_counts(tweets_df):

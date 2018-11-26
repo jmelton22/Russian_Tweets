@@ -6,8 +6,7 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 
-tweet_text = pd.read_csv('../tweets/tweets_text.csv', header=0)
-tweet_text.dropna(subset=['lemmas'], inplace=True)
+tweet_text = pd.read_csv('../tweets/tweets_clean.csv', header=0)
 
 tweet_docs = tweet_text.lemmas.tolist()
 tweet_orig = tweet_text.text.tolist()

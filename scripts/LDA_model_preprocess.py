@@ -62,4 +62,4 @@ corpus = [id2word.doc2bow(tweet) for tweet in tweet_lemmas]
 with open('./topic_modeling_objects/corpus.pkl', 'wb') as f_out:
     pickle.dump(corpus, f_out)
 
-tweet_text_df.to_csv('../tweets/tweets_text.csv', index=False)
+# tweet_text_df.to_csv('../tweets/tweets_text.csv', index=False)
