@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/LDA_clustering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -33,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="9" />
+              <selected id="0" />
             </state>
           </provider>
         </entry>
@@ -400,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543273750726</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added pyLDAvis and topic clusters graph to notebooks">
+      <created>1543295064796</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543295064796</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -446,7 +450,8 @@
     <MESSAGE value="Updated LDA pipeline and model. Added graphing cross-validation results" />
     <MESSAGE value="Added daily tweets time series plot" />
     <MESSAGE value="Added notebooks for preprocess, visuals, and LDA modeling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added notebooks for preprocess, visuals, and LDA modeling." />
+    <MESSAGE value="Added pyLDAvis and topic clusters graph to notebooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pyLDAvis and topic clusters graph to notebooks" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis.py">
@@ -771,7 +776,7 @@
     <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="9" />
+          <selected id="0" />
         </state>
       </provider>
     </entry>
