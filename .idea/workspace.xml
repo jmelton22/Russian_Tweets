@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/LDA_timeseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_CV.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_feature_names.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_vect.joblib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/LDA_topic_clusters_1D.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/LDA_topic_clusters_2D.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/monthly_topics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/monthly_topics_prop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/LDA_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/LDA_clustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_NMF.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_NMF_model.joblib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_NMF.csv" beforeDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -13,24 +27,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/LDA_clustering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="50" selection-start-line="50" selection-end-line="64" selection-end-column="10" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
+        <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="92" column="54" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -102,17 +107,20 @@
         <option value="$PROJECT_DIR$/scripts/hashtag_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" />
-        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_model.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_clustering.py" />
+        <option value="$PROJECT_DIR$/LDA_visuals.ipynb" />
+        <option value="$PROJECT_DIR$/scripts/LDA_timeseries.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_results.ipynb" />
+        <option value="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" />
+        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1090" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -120,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,10 +145,22 @@
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="topic_modeling_objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="visuals" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.LDA_clustering">
+  <component name="RunManager" selected="Python.LDA_timeseries">
     <configuration name="Russian_Tweets" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,6 +226,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="LDA_timeseries" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Russian_Tweets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/LDA_timeseries.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="cross_validation_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,27 +260,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="find_hashtags" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Russian_Tweets" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/find_hashtags.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,18 +313,18 @@
     <list>
       <item itemvalue="Jupyter Notebook.Russian_Tweets" />
       <item itemvalue="Python.preprocess" />
-      <item itemvalue="Python.find_hashtags" />
       <item itemvalue="Python.hashtag_tweets" />
       <item itemvalue="Python.cross_validation_results" />
       <item itemvalue="Python.LDA_clustering" />
+      <item itemvalue="Python.LDA_timeseries" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.LDA_timeseries" />
         <item itemvalue="Python.LDA_clustering" />
         <item itemvalue="Python.cross_validation_results" />
         <item itemvalue="Python.hashtag_tweets" />
         <item itemvalue="Python.preprocess" />
-        <item itemvalue="Python.find_hashtags" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543295064796</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Removed old preprocess notebook">
+      <created>1543295157759</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543295157759</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -420,12 +446,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19431593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2419035" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33646113" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27479893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39812332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -451,34 +477,10 @@
     <MESSAGE value="Added daily tweets time series plot" />
     <MESSAGE value="Added notebooks for preprocess, visuals, and LDA modeling." />
     <MESSAGE value="Added pyLDAvis and topic clusters graph to notebooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pyLDAvis and topic clusters graph to notebooks" />
+    <MESSAGE value="Removed old preprocess notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old preprocess notebook" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/monthly_visuals.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sitecustomize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_mallet.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/test2.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tweets/tweets_lemmas.csv" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -491,10 +493,10 @@
     <entry file="file://$PROJECT_DIR$/tweets/tweets_text.csv" />
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic.csv" />
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df1.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -504,9 +506,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visuals/sklearn_LDA_scores.png" />
-    <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -518,19 +517,9 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/user_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/initial_visuals.py">
@@ -543,54 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visuals/cv_scores.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_NMF.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/monthly_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="57" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/test.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -672,23 +614,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/preprocess_wordcloud.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/preprocess_wordcloud.ipynb" />
     <entry file="file://$PROJECT_DIR$/tweets/tweets_clean.csv">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
@@ -722,16 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -745,16 +661,6 @@
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/LDA_clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="50" selection-start-line="50" selection-end-line="64" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,10 +679,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="3112" column="19" lean-forward="true" selection-start-line="3112" selection-start-column="19" selection-end-line="3112" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/cv_scores.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/user_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="82" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/LDA_topic_clusters_2D.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/LDA_topic_clusters.png" />
+    <entry file="file://$PROJECT_DIR$/visuals/monthly_topics.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDA_visuals.ipynb" />
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_NMF.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/LDA_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/monthly_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="0" />
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="92" column="54" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

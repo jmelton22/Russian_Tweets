@@ -34,11 +34,37 @@ lda_W = lda_model.transform(tf)
 # Construct k-means clusters
 clusters = KMeans(n_clusters=15,
                   random_state=100).fit_predict(lda_W)
-colors = ['#E53935', '#D81B60', '#8E24AA', '#5E35B1', '#3949AB',
-          '#1976D2', '#0288D1', '#0097A7', '#00796B', '#8D6E63',
-          '#689F38', '#AFB42B', '#FBC02D', '#90A4AE', '#F57C00']
+# colors = ['#E53935', '#D81B60', '#8E24AA', '#5E35B1', '#3949AB',
+#           '#1976D2', '#0288D1', '#0097A7', '#00796B', '#8D6E63',
+#           '#689F38', '#AFB42B', '#FBC02D', '#90A4AE', '#F57C00']
 
-# Build Singluar Value Decomposition (SVD) model
+colors = ['#E53935', '#0288D1', '#8E24AA', '#00796B', '#689F38',
+           '#D81B60', '#5E35B1', '#AFB42B', '#FBC02D', '#90A4AE',
+           '#F57C00', '#1976D2', '#3949AB', '#0097A7', '#8D6E63']
+
+# Build 1D Singluar Value Decomposition (SVD) model
+svd_model = TruncatedSVD(n_components=1)
+lda_output_svd = svd_model.fit_transform(lda_W)
+
+x = lda_output_svd[:, 0]
+print('Component\'s weights:\n', np.round(svd_model.components_, 2))
+print('Percent variance explained:\n', np.round(svd_model.explained_variance_ratio_, 2))
+
+fig1 = plt.figure(figsize=(12, 12))
+for topic, color in zip(np.unique(clusters), colors):
+    i = np.where(clusters == topic)
+    plt.plot(x[i], c=color, label=topic, alpha=0.2)
+
+plt.ylabel('Component 1')
+plt.title('Segregation of Topic Clusters 1D')
+leg = plt.legend(title='Topic', loc='best', ncol=3)
+
+for lh in leg.legendHandles:
+    lh.set_alpha(1)
+
+fig1.savefig('../visuals/LDA_topic_clusters_1D.png')
+
+# Build 2D Singluar Value Decomposition (SVD) model
 svd_model = TruncatedSVD(n_components=2)
 lda_output_svd = svd_model.fit_transform(lda_W)
 
@@ -48,18 +74,19 @@ y = lda_output_svd[:, 1]
 print('Component\'s weights:\n', np.round(svd_model.components_, 2))
 print('Percent variance explained:\n', np.round(svd_model.explained_variance_ratio_, 2))
 
-fig = plt.figure(figsize=(12, 12))
+fig2 = plt.figure(figsize=(12, 12))
 for topic, color in zip(np.unique(clusters), colors):
     i = np.where(clusters == topic)
-    plt.scatter(x[i], y[i], c=color, label=topic, alpha=0.2)
+    plt.scatter(x[i], y[i],
+                c=color, label=topic, alpha=0.2)
 
 plt.xlabel('Component 1')
 plt.ylabel('Component 2')
-plt.title('Segregation of Topic Clusters')
+plt.title('Segregation of Topic Clusters 2D')
 leg = plt.legend(title='Topic', loc='best', ncol=3)
 
 for lh in leg.legendHandles:
     lh.set_alpha(1)
 
-fig.savefig('../visuals/LDA_topic_clusters.png')
+fig2.savefig('../visuals/LDA_topic_clusters_2D.png')
 plt.show()
