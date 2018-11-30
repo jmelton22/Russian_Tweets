@@ -31,11 +31,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="262">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/topic_stats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -59,6 +71,11 @@
       <find>user_counts</find>
       <find>users_to_plot</find>
       <find>htt</find>
+      <find>go</find>
+      <find>use</find>
+      <find>thing</find>
+      <find>yet</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>monthly_tweets</replace>
@@ -93,7 +110,6 @@
         <option value="$PROJECT_DIR$/scripts/daily_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/initial_visuals.py" />
         <option value="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" />
-        <option value="$PROJECT_DIR$/scripts/LDA_model_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/test.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
@@ -118,9 +134,11 @@
         <option value="$PROJECT_DIR$/scripts/LDA_timeseries_daily.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_timeseries.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" />
-        <option value="$PROJECT_DIR$/scripts/topic_stats.py" />
+        <option value="$PROJECT_DIR$/scripts/LDA_model_pipeline.py" />
+        <option value="$PROJECT_DIR$/scripts/stop_word_test.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/notebooks/preprocess.ipynb" />
+        <option value="$PROJECT_DIR$/scripts/topic_stats.py" />
       </list>
     </option>
   </component>
@@ -188,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.topic_stats">
+  <component name="RunManager" selected="Python.stop_word_test">
     <configuration name="Russian_Tweets" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,7 +266,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="combined_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,7 +278,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/combined_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/preprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -269,7 +287,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="monthly_tweets" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="stop_word_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,7 +299,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/monthly_tweets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/stop_word_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,18 +332,18 @@
     <list>
       <item itemvalue="Jupyter Notebook.Russian_Tweets" />
       <item itemvalue="Python.LDA_timeseries" />
-      <item itemvalue="Python.combined_plot" />
-      <item itemvalue="Python.monthly_tweets" />
       <item itemvalue="Python.LDA_timeseries_daily" />
       <item itemvalue="Python.topic_stats" />
+      <item itemvalue="Python.stop_word_test" />
+      <item itemvalue="Python.preprocess" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.stop_word_test" />
+        <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.topic_stats" />
         <item itemvalue="Python.LDA_timeseries_daily" />
         <item itemvalue="Python.LDA_timeseries" />
-        <item itemvalue="Python.combined_plot" />
-        <item itemvalue="Python.monthly_tweets" />
       </list>
     </recent_temporary>
   </component>
@@ -445,10 +463,17 @@
       <option name="project" value="LOCAL" />
       <updated>1543587067506</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated notebooks">
+      <created>1543591476497</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1543591476497</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -461,18 +486,18 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20423001" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21216127" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35254693" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49329758" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39812332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22252011" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3605898" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32885906" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -495,15 +520,10 @@
     <MESSAGE value="Removed old preprocess notebook" />
     <MESSAGE value="Added visualizations for LDA topics" />
     <MESSAGE value="More visuals for LDA topics timeseries" />
-    <option name="LAST_COMMIT_MESSAGE" value="More visuals for LDA topics timeseries" />
+    <MESSAGE value="Updated notebooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated notebooks" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df1.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -664,16 +684,6 @@
     <entry file="file://$PROJECT_DIR$/visuals/cv_scores.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/user_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -783,33 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="95" selection-start-line="95" selection-end-line="96" selection-end-column="27" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -817,17 +800,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
+    <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -840,8 +819,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="306">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/stop_word_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>

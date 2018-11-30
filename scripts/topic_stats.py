@@ -41,35 +41,21 @@ fig.savefig('../visuals/tweets_boxplot.png')
 
 print(topics_daily.idxmax())
 """
-Topic 0: December 14, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_December_14
-Topic 1: May 05, 2015: https://en.wikipedia.org/wiki/Portal:Current_events/2015_May_5
-Topic 2: February 11, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_February_11
-    - North/South Korean relations
-Topic 3: December 21, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_December_21
-    - Berlin van terror attack
-Topic 4: November 15, 2015: https://en.wikipedia.org/wiki/Portal:Current_events/2015_November_15
-    - Paris terror attack
-Topic 5: February 29. 2016:  https://en.wikipedia.org/wiki/Portal:Current_events/2016_February_29
-    - Migrant crisis in Europe
-    - Final batch of Clinton emails recovered from server
-Topic 6: August 13, 2015: https://en.wikipedia.org/wiki/Portal:Current_events/2015_August_13
-Topic 7: August 03, 2017: https://en.wikipedia.org/wiki/Portal:Current_events/2017_August_3
-    - Trump transcripts with Mexican President Nieto and Australian PM Turnbull
-    - Mueller impanels grand jury
-Topic 8: February 20, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_February_20
-    - Caucuses in Nevada and SC
-        - Hillary beats Bernie in Nevada
-        - Trump wins SC; Jeb Bush suspends campaign
-Topic 9: July 21, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_July_21
-    - Trump accepts GOP nomination
-    - Russia ban in Rio Olympics
-Topic 10: June 23, 2017: https://en.wikipedia.org/wiki/Portal:Current_events/2017_June_23
-Topic 11: May 08, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_May_8
-Topic 12: March 31, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_March_31
-Topic 13: March 12, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_March_12
-    - Primaries
-Topic 14: March 12 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_March_12
-    - Primaries
+Topic 0: November 02, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_November_2
+Topic 1: February 29, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_February_29
+Topic 2: July 21, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_July_21
+Topic 3: November 23, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_November_23
+Topic 4: September 26, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_September_26
+Topic 5: October 05, 2016:  https://en.wikipedia.org/wiki/Portal:Current_events/2016_October_5
+Topic 6: December 19, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_December_19
+Topic 7: December 16, 2015: https://en.wikipedia.org/wiki/Portal:Current_events/2015_December_16
+Topic 8: October 17, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_October_17
+Topic 9: November 08, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_November_8
+Topic 10: August 03, 2017: https://en.wikipedia.org/wiki/Portal:Current_events/2017_August_3
+Topic 11: June 23, 2017: https://en.wikipedia.org/wiki/Portal:Current_events/2017_June_23
+Topic 12: September 01, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_September_1
+Topic 13: March 22, 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_March_22
+Topic 14: June 20 2016: https://en.wikipedia.org/wiki/Portal:Current_events/2016_June_20
 """
 
 plt.show()
