@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/topic_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visuals/tweets_boxplot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/initial_visuals-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/initial_visuals-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_timeseries.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/LDA_timeseries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/monthly_topics.html" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/monthly_topics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/monthly_topics_prop.html" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/monthly_topics_prop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/monthly_tweets.html" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/monthly_tweets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/preprocess.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/preprocess.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_CV.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_CV.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_LDA_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_LDA_model.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_feature_names.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_feature_names.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_vect.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_vect.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/topic_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweets_clean.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/tweets_clean.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/tweets_boxplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/tweets_boxplot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/wordcloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/wordcloud.png" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -21,47 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="430">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries_daily.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/topic_stats.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="28" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
             </state>
           </provider>
         </entry>
@@ -128,7 +105,6 @@
         <option value="$PROJECT_DIR$/notebooks/LDA_model_results.ipynb" />
         <option value="$PROJECT_DIR$/scripts/find_hashtags.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
-        <option value="$PROJECT_DIR$/notebooks/preprocess.ipynb" />
         <option value="$PROJECT_DIR$/scripts/hashtag_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" />
@@ -138,19 +114,20 @@
         <option value="$PROJECT_DIR$/notebooks/LDA_results.ipynb" />
         <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
         <option value="$PROJECT_DIR$/scripts/monthly_tweets.py" />
-        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/combined_plot.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_timeseries_daily.py" />
         <option value="$PROJECT_DIR$/scripts/LDA_timeseries.py" />
-        <option value="$PROJECT_DIR$/scripts/topic_stats.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" />
+        <option value="$PROJECT_DIR$/scripts/topic_stats.py" />
+        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
+        <option value="$PROJECT_DIR$/notebooks/preprocess.ipynb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="979" />
-    <option name="height" value="1089" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -461,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543432711326</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="More visuals for LDA topics timeseries">
+      <created>1543587067506</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543587067506</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -477,7 +461,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18572372" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20423001" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -488,7 +472,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32885906" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32573727" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22252011" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32885906" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -510,7 +494,8 @@
     <MESSAGE value="Added pyLDAvis and topic clusters graph to notebooks" />
     <MESSAGE value="Removed old preprocess notebook" />
     <MESSAGE value="Added visualizations for LDA topics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added visualizations for LDA topics" />
+    <MESSAGE value="More visuals for LDA topics timeseries" />
+    <option name="LAST_COMMIT_MESSAGE" value="More visuals for LDA topics timeseries" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df1.csv">
@@ -649,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -663,20 +641,6 @@
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
         </state>
       </provider>
     </entry>
@@ -756,28 +720,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/visuals/topic_stacked_area.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/monthly_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -826,16 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries_daily.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -848,11 +785,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="1275">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="95" selection-start-line="95" selection-end-line="96" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -860,6 +835,16 @@
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/LDA_timeseries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

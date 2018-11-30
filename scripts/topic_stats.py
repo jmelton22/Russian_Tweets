@@ -73,4 +73,3 @@ Topic 14: March 12 2016: https://en.wikipedia.org/wiki/Portal:Current_events/201
 """
 
 plt.show()
-
