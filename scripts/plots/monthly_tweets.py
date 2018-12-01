@@ -6,15 +6,24 @@ import seaborn as sns
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource
 
-tweets = pd.read_csv('../tweets/tweets_clean.csv',
+tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
-                     parse_dates=['date'],
-                     index_col='date')
-tweets_subset = tweets.loc['2016-07-01': '2017-03-31']
-daily_tweets = tweets_subset.groupby(tweets_subset.index.date).size().to_frame('counts')
+                     parse_dates=['date'])
+
+# Group into number of tweets per month
+monthly_tweets = tweets.groupby([tweets.date.dt.year, tweets.date.dt.month]).size().to_frame('counts')
+monthly_tweets.index.rename(['year', 'month'], inplace=True)
+
+# Collapse index back into a single date
+monthly_tweets.reset_index(inplace=True)
+monthly_tweets['date'] = pd.to_datetime(dict(year=monthly_tweets.year,
+                                             month=monthly_tweets.month,
+                                             day=[1] * len(monthly_tweets)))
+monthly_tweets.set_index(monthly_tweets['date'], inplace=True)
+monthly_tweets.drop(['year', 'month', 'date'], axis=1, inplace=True)
 
 
-def daily_counts(tweets_df):
+def monthly_counts(tweets_df):
     # Create color palette for tweet values
     palette = sns.color_palette('YlOrRd', len(tweets_df))
     # Assign a color to each value of tweets by rank
@@ -24,12 +33,12 @@ def daily_counts(tweets_df):
                                      counts=tweets_df.counts,
                                      color=tweets_df.color))
 
-    output_file('../visuals/daily_tweets.html')
+    output_file('../../visuals/monthly_tweets.html')
     p = figure(width=1000, height=600,
                x_axis_type='datetime',
                x_axis_label='Date',
                y_axis_label='Number of tweets',
-               title='Tweets per day')
+               title='Tweets per month')
 
     p.line(x='date',
            y='counts',
@@ -39,18 +48,18 @@ def daily_counts(tweets_df):
     p.circle(x='date',
              y='counts',
              fill_color='color',
-             size=12,
+             size=15,
              source=src)
 
-    hover = HoverTool(tooltips=[('Date', '@date{%m-%d-%Y}'),
+    hover = HoverTool(tooltips=[('Date', '@date{%B-%Y}'),
                                 ('Num tweets', '@counts')],
                       formatters={'date': 'datetime'},
-                      mode='mouse')
+                      mode='vline')
     p.add_tools(hover)
     p.xgrid.grid_line_color = None
 
     return p
 
 
-daily_plot = daily_counts(daily_tweets)
-show(daily_plot)
+monthly_plot = monthly_counts(monthly_tweets)
+show(monthly_plot)

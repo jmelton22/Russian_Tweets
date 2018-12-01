@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-tweets = pd.read_csv('../tweets/tweets_clean.csv',
+tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'],
                      index_col='date')
@@ -12,7 +12,7 @@ tweets.dropna(subset=['lemmas'], inplace=True)
 # tweets = tweets.loc['2016-07-01': '2017-03-31']
 tweets.reset_index(inplace=True)
 
-doc_topics = pd.read_csv('./topic_modeling_objects/topics_per_doc_LDA.csv',
+doc_topics = pd.read_csv('../../results_csv/topics_per_doc_LDA.csv',
                          header=0)
 
 tweets = pd.concat([tweets['date'], doc_topics['dominant_topic']], axis=1)
@@ -38,7 +38,7 @@ plt.xlabel('Topic')
 plt.ylabel('Proportion of tweets')
 plt.title('Boxplot of Topics for Daily Tweets')
 
-fig.savefig('../visuals/tweets_prop_boxplot.png')
+fig.savefig('../../visuals/tweets_prop_boxplot.png')
 
 print(topics_daily_props.idxmax())
 """
@@ -65,7 +65,7 @@ plt.xlabel('Topic')
 plt.ylabel('Number of tweets')
 plt.title('Boxplot of Topics for Daily Tweets')
 
-fig.savefig('../visuals/tweets_boxplot.png')
+fig.savefig('../../visuals/tweets_boxplot.png')
 
 print(topics_daily.idxmax())
 """
@@ -108,6 +108,6 @@ plt.xlabel('Log of Number of Tweets')
 plt.ylabel('Proportion of Days')
 plt.title('KDE Plot for Log of Daily Tweets per Topic')
 
-fig.get_figure().savefig('../visuals/topics_kde.png')
+fig.get_figure().savefig('../../visuals/topics_kde.png')
 
 plt.show()

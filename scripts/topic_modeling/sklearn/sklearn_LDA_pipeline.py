@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
-tweet_text = pd.read_csv('../tweets/tweets_clean.csv', header=0)
+tweet_text = pd.read_csv('../../../tweets/tweets_clean.csv', header=0)
 
 tweet_docs = tweet_text.lemmas.tolist()
 
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     for k, v in best_params.items():
         print('{}: {}'.format(k, v))
 
-    pd.DataFrame(grid_search.cv_results_).to_csv('./topic_modeling_objects/cv_results_df.csv', index=False)
+    pd.DataFrame(grid_search.cv_results_).to_csv('../../../results_csv/cv_results_df.csv', index=False)

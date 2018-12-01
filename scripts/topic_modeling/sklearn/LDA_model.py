@@ -4,32 +4,28 @@ import pandas as pd
 import numpy as np
 import joblib
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
 
-tweet_text = pd.read_csv('../tweets/tweets_clean.csv', header=0)
+tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
+                     header=0,
+                     parse_dates=['date'])
+tweet_docs = tweets.lemmas.tolist()
+tweet_orig = tweets.text.tolist()
 
-tweet_docs = tweet_text.lemmas.tolist()
-tweet_orig = tweet_text.text.tolist()
+# Load vectorizer
+with open('../../../topic_modeling_objects/sklearn_vect.joblib', 'rb') as f:
+    cv = joblib.load(f)
 
-cv = CountVectorizer(max_df=0.95,
-                     min_df=100)
-tf = cv.fit_transform(tweet_docs)
-tf_names = cv.get_feature_names()
+# Load term frequency matrix
+with open('../../../topic_modeling_objects/sklearn_CV.joblib', 'rb') as f:
+    tf = joblib.load(f)
 
-lda = LatentDirichletAllocation(n_components=15,
-                                max_iter=10,
-                                learning_method='online',
-                                learning_decay=0.7,
-                                random_state=123)
-lda_model = lda.fit(tf)
+# Load feature names
+with open('../../../topic_modeling_objects/sklearn_feature_names.joblib', 'rb') as f:
+    tf_names = joblib.load(f)
 
-print('Perplexity: {:.3f}'.format(lda_model.perplexity(tf)))
-print('Log likelihood: {:.3f}'.format(lda_model.score(tf)))
-print()
-
-# Save fitted model
-with open('./topic_modeling_objects/sklearn_LDA_model.joblib', 'wb') as f_out:
-    joblib.dump(lda_model, f_out)
+# Load fitted LDA model
+with open('../../../topic_modeling_objects/sklearn_LDA_model.joblib', 'rb') as f:
+    lda_model = joblib.load(f)
 
 # Topic to document matrix (W) for LDA model
 lda_W = lda_model.transform(tf)
@@ -85,6 +81,6 @@ topic_words_df.columns = word_names
 topic_words_df.index = topic_names
 print(topic_words_df.iloc[:, :5])
 
-doc_topic_df.to_csv('./topic_modeling_objects/topics_per_doc_LDA.csv', index=True)
-topic_dist_df.to_csv('./topic_modeling_objects/docs_per_topic_LDA.csv', index=False)
-topic_words_df.to_csv('./topic_modeling_objects/words_per_topic_LDA.csv', index=True)
+doc_topic_df.to_csv('../../../results_csv/topics_per_doc_LDA.csv', index=True)
+topic_dist_df.to_csv('../../../results_csv/docs_per_topic_LDA.csv', index=False)
+topic_words_df.to_csv('../../../results_csv/words_per_topic_LDA.csv', index=True)

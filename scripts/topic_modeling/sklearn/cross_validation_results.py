@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 plt.style.use('seaborn-whitegrid')
-results = pd.read_csv('./topic_modeling_objects/cv_results_df.csv', header=0)
+results = pd.read_csv('../../../results_csv/cv_results_df.csv', header=0)
 results['params'] = results.params.apply(ast.literal_eval)
 
 for _, row in results.sort_values(by='rank_test_score').iterrows():
@@ -48,6 +48,6 @@ plt.ylabel('Log Likelihood Score')
 plt.title('Cross-Validation Scores for LDA Models')
 plt.legend(title='Learning Decay', loc='best', frameon=True)
 
-fig.savefig('../visuals/cv_scores.png')
+fig.savefig('../../../visuals/cv_scores.png')
 
 plt.show()

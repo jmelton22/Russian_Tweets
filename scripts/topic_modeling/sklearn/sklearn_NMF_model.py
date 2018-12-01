@@ -6,7 +6,7 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 
-tweet_text = pd.read_csv('../tweets/tweets_clean.csv', header=0)
+tweet_text = pd.read_csv('../../../tweets/tweets_clean.csv', header=0)
 
 tweet_docs = tweet_text.lemmas.tolist()
 tweet_orig = tweet_text.text.tolist()
@@ -25,7 +25,7 @@ nmf = NMF(n_components=15,
           random_state=123)
 nmf_model = nmf.fit(tfidf)
 
-with open('./topic_modeling_objects/sklearn_NMF_model.joblib', 'wb') as f_out:
+with open('../../../topic_modeling_objects/sklearn_NMF_model.joblib', 'wb') as f_out:
     joblib.dump(nmf_model, f_out)
 
 # Topic to document matrix (W)
@@ -63,5 +63,5 @@ topic_dist_df.columns = ['Topic_num', 'Num_docs']
 print()
 print(topic_dist_df)
 
-doc_topic_df.to_csv('./topic_modeling_objects/topics_per_doc_NMF.csv', index=False)
-topic_dist_df.to_csv('./topic_modeling_objects/docs_per_topic_NMF.csv', index=False)
+doc_topic_df.to_csv('../../../results_csv/topics_per_doc_NMF.csv', index=False)
+topic_dist_df.to_csv('../../../results_csv/docs_per_topic_NMF.csv', index=False)

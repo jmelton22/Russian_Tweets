@@ -15,22 +15,23 @@ from gensim.models import CoherenceModel
 
 import matplotlib.pyplot as plt
 
+# Load lemmatized tweets
+with open('../../../topic_modeling_objects/lemmas.pkl', 'rb') as f:
+    tweet_lemmas = pickle.load(f)
+
+# Load gensim dictionary
+id2word = corpora.Dictionary.load('../../../topic_modeling_objects/dictionary.pkl')
+
+# Load gensim corpus
+with open('../../../topic_modeling_objects/corpus.pkl', 'rb') as f:
+    corpus = pickle.load(f)
+
+# readable_corpus = [[(id2word[i], freq) for i, freq in cp] for cp in corpus]
+
 
 if __name__ == "__main__":
-    # Load lemmatized tweets
-    with open('./topic_modeling_objects/lemmas.pkl', 'rb') as f:
-        tweet_lemmas = pickle.load(f)
 
-    # Load gensim dictionary
-    id2word = corpora.Dictionary.load('./topic_modeling_objects/dictionary.pkl')
-
-    # Load gensim corpus
-    with open('./topic_modeling_objects/corpus.pkl', 'rb') as f:
-        corpus = pickle.load(f)
-
-    # readable_corpus = [[(id2word[i], freq) for i, freq in cp] for cp in corpus]
-
-    def score_models(dictionary, corpus, texts, limit, start=2, step=3):
+    def score_models(dictionary, corpus, texts, limit, start=2, step=4):
         """
         Compute c_v coherence scores and log perplexity values for LDA models with various numbers of topics
 
@@ -95,7 +96,7 @@ if __name__ == "__main__":
     fig.tight_layout()
     plt.title('Coherence and Log Perplexity of LDA Models by Number of Topics')
 
-    fig.savefig('../visuals/LDA_model_scores.png')
+    fig.savefig('../../../visuals/LDA_model_scores.png')
 
     plt.show()
 

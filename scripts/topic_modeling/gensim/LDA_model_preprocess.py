@@ -15,7 +15,7 @@ import spacy
 import gensim
 import gensim.corpora as corpora
 
-tweets = pd.read_csv('../tweets/tweets_clean.csv',
+tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
 print('Reading in tweets')
@@ -47,19 +47,19 @@ tweet_lemmas = lemmatization(tweet_text)
 tweet_text_df['lemmas'] = [' '.join(words) for words in tweet_lemmas]
 
 # Save tweet lemmas to pickle file
-with open('./topic_modeling_objects/lemmas.pkl', 'wb') as f_out:
+with open('../../../topic_modeling_objects/lemmas.pkl', 'wb') as f_out:
     pickle.dump(tweet_lemmas, f_out)
 
 print('Making Dictionary')
 id2word = corpora.Dictionary(tweet_lemmas)
 # Save Dictionary to pickle file
-id2word.save('./topic_modeling_objects/dictionary.pkl')
+id2word.save('../../../topic_modeling_objects/dictionary.pkl')
 
 print('Converting docs to bags of words corpus')
 corpus = [id2word.doc2bow(tweet) for tweet in tweet_lemmas]
 
 # Save corpus to pickle file
-with open('./topic_modeling_objects/corpus.pkl', 'wb') as f_out:
+with open('../../../topic_modeling_objects/corpus.pkl', 'wb') as f_out:
     pickle.dump(corpus, f_out)
 
-# tweet_text_df.to_csv('../tweets/tweets_text.csv', index=False)
+# tweet_text_df.to_csv('../../../tweets/tweets_text.csv', index=False)

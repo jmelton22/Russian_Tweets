@@ -5,13 +5,13 @@ import numpy as np
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource
 
-tweets = pd.read_csv('../tweets/tweets_clean.csv',
+tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
 tweets.dropna(subset=['lemmas'], inplace=True)
 tweets.reset_index(drop=True, inplace=True)
 
-doc_topics = pd.read_csv('./topic_modeling_objects/topics_per_doc_LDA.csv',
+doc_topics = pd.read_csv('../../topic_modeling_objects/topics_per_doc_LDA.csv',
                          header=0)
 
 tweets = pd.concat([tweets['date'], doc_topics['dominant_topic']], axis=1)
@@ -31,7 +31,7 @@ topics_per_month.drop(['year', 'month'], axis=1, inplace=True)
 topics_per_month.columns = topics_per_month.columns.values.astype('str')
 
 
-def monthly_topics(tweets_df, out_file='../visuals/monthly_topics.html'):
+def monthly_topics(tweets_df, out_file='../../visuals/monthly_topics.html'):
     topics = [str(i) for i in range(15)]
 
     palette = ['#E53935', '#0288D1', '#8E24AA', '#00796B', '#689F38',
@@ -75,7 +75,7 @@ monthly_props['date'] = topics_per_month['date']
 
 topics_plot = monthly_topics(topics_per_month)
 show(topics_plot)
-topics_prop_plot = monthly_topics(monthly_props, out_file='../visuals/monthly_topics_prop.html')
+topics_prop_plot = monthly_topics(monthly_props, out_file='../../visuals/monthly_topics_prop.html')
 show(topics_prop_plot)
 
 topics_per_month.set_index('date', inplace=True)
@@ -84,7 +84,7 @@ monthly_props.set_index('date', inplace=True)
 # TODO: Hovertools not working for stacked area plot
 
 
-def stacked_area(tweets_df, out_file='../visuals/topic_stacked_area.html'):
+def stacked_area(tweets_df, out_file='../../visuals/topic_stacked_area.html'):
     topics = [str(i) for i in range(15)]
 
     def stacked(df):
@@ -136,5 +136,5 @@ def stacked_area(tweets_df, out_file='../visuals/topic_stacked_area.html'):
 area_plot = stacked_area(topics_per_month)
 show(area_plot)
 
-area_prop_plot = stacked_area(monthly_props, out_file='../visuals/topic_prop_stacked_area.html')
+area_prop_plot = stacked_area(monthly_props, out_file='../../visuals/topic_prop_stacked_area.html')
 show(area_prop_plot)
