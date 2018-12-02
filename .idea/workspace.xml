@@ -1,39 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="Reorganized directory structure and updated paths.">
-      <change afterPath="$PROJECT_DIR$/scripts/plots/initial_visuals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" afterDir="false" />
+    <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_results.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/preprocess.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/preprocess.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_model_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/LDA_timeseries.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/cross_validation_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/daily_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/daily_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/hashtag_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/monthly_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis/tweet_sentiments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/tweet_sentiments.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/cv_results_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/cv_results_df.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/docs_per_topic_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/docs_per_topic_LDA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_CV.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/topic_modeling_objects/sklearn_CV.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_LDA_model.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/topic_modeling_objects/sklearn_LDA_model.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_feature_names.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/topic_modeling_objects/sklearn_feature_names.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/sklearn_vect.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/topic_modeling_objects/sklearn_vect.joblib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/topics_per_doc_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/topics_per_doc_LDA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling_objects/words_per_topic_LDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/words_per_topic_LDA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/user_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/user_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess.py" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -46,46 +17,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notebooks/LDA_results.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="6" />
+        <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#24#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="0" />
+        <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,11 +61,13 @@
       <find>thing</find>
       <find>yet</find>
       <find>get</find>
+      <find>df</find>
     </findStrings>
     <replaceStrings>
       <replace>monthly_tweets</replace>
       <replace>tweets_df</replace>
       <replace>hashtags_to_plot</replace>
+      <replace>topic_sentiment</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -125,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/LDA_model_preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_LDA_testing.py" />
@@ -153,7 +104,6 @@
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
         <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
-        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/scratch.py" />
         <option value="$PROJECT_DIR$/scripts/plots/daily_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" />
@@ -176,12 +126,14 @@
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_testing.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_model.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_pipeline.py" />
+        <option value="$PROJECT_DIR$/scripts/preprocess.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+    <option name="x" value="-8" />
+    <option name="width" value="978" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -200,7 +152,18 @@
             <path>
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
-              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="results_csv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -234,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.sentiment_visuals">
     <configuration name="cross_validation_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,8 +219,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sentiment_visuals" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Russian_Tweets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/sentiment_analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sentiment_visuals" />
         <item itemvalue="Python.cross_validation_results" />
         <item itemvalue="Python.cross_validation_results" />
       </list>
@@ -400,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543682660531</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Reorganized directory structure and updated paths.">
+      <created>1543700849976</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1543700849976</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -416,12 +408,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18241903" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3552279" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41286862" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39812332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,10 +445,10 @@
     <MESSAGE value="Updated notebooks" />
     <MESSAGE value="Added additional stop words and re-ran LDA model. Updated notebooks" />
     <MESSAGE value="Added sentiment analysis script and results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sentiment analysis script and results" />
+    <MESSAGE value="Reorganized directory structure and updated paths." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganized directory structure and updated paths." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/notebooks/preprocess_wordcloud.ipynb" />
     <entry file="file://$PROJECT_DIR$/tweets/tweets_clean.csv">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
@@ -542,16 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/data_for_d3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -603,13 +585,6 @@
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -754,24 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
         </state>
       </provider>
     </entry>
@@ -782,10 +743,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/preprocess.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -73,10 +73,6 @@ def clean_text(text):
     return ' '.join([word for word in clean.split(' ') if word is not ''])
 
 
-def find_hashtags(text):
-    return re.findall('#(\w+)', text)
-
-
 # Find hashtags in tweets
 print('Finding hashtags in tweets')
 tweets['hashtags'] = tweets['text'].apply(lambda text: re.findall('#(\w+)', text))
