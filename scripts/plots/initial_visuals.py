@@ -4,12 +4,21 @@ import pandas as pd
 import math
 import ast
 from collections import Counter
+
 from wordcloud import WordCloud
+
 import matplotlib.pyplot as plt
 import matplotlib.colors as mc
 import seaborn as sns
+
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource, Range1d
+
+"""
+
+Script combining all of the plots from scripts in the plots folder into a single .py script
+
+"""
 
 tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,

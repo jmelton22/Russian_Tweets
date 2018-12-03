@@ -10,11 +10,20 @@ tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'],
                      index_col='date')
+
+# Subset only tweets between July 2016 and March 2017
 tweets_subset = tweets.loc['2016-07-01': '2017-03-31']
+# Group into number of tweets per day
 daily_tweets = tweets_subset.groupby(tweets_subset.index.date).size().to_frame('counts')
 
 
 def daily_counts(tweets_df):
+    """
+    Function to generate a time series plot of the number of tweets posted per day
+
+    :param tweets_df: dataframe with index for each day of data, column is count of tweets
+    :return: bokeh plot
+    """
     # Create color palette for tweet values
     palette = sns.color_palette('YlOrRd', len(tweets_df))
     # Assign a color to each value of tweets by rank

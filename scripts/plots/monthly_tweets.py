@@ -24,6 +24,12 @@ monthly_tweets.drop(['year', 'month', 'date'], axis=1, inplace=True)
 
 
 def monthly_counts(tweets_df):
+    """
+    Function to generate a time series plot of the number of tweets posted per month
+
+    :param tweets_df: dataframe with index of each month of data, column is count of tweets
+    :return: bokeh plot
+    """
     # Create color palette for tweet values
     palette = sns.color_palette('YlOrRd', len(tweets_df))
     # Assign a color to each value of tweets by rank

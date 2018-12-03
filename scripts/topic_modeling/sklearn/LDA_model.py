@@ -70,7 +70,7 @@ doc_topic_df = pd.DataFrame(np.round(lda_W, 2), columns=topic_names, index=doc_n
 doc_topic_df['dominant_topic'] = np.argmax(doc_topic_df.values, axis=1)
 print(doc_topic_df.head(25))
 
-# Create df with document topic distribution (num docs per topic)
+# Create df with document topic distribution (number of docs per topic)
 topic_dist_df = doc_topic_df['dominant_topic'].value_counts().reset_index(name='Num docs')
 topic_dist_df.columns = ['Topic_num', 'Num_docs']
 topic_dist_df['Proportion'] = topic_dist_df.Num_docs.apply(lambda x: x / len(tweet_docs))

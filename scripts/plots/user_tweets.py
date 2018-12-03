@@ -11,11 +11,18 @@ tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
 
-# Group into user keys
+# Group data by user key
 user_tweets = tweets.groupby('user_key').size().sort_values(ascending=False).to_frame('counts')
 
 
 def user_counts(tweets_df, num_users=15):
+    """
+    Function to generate a bar chart of top user_keys by number of tweets posted
+
+    :param tweets_df: dataframe with index of each user_key of data, column is count of tweets
+    :param num_users: Number of top users to plot
+    :return: bokeh plot
+    """
     users_to_plot = tweets_df.iloc[:num_users, :]
 
     palette = [mc.rgb2hex(col) for col in sns.color_palette('Blues_r', num_users)]

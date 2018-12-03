@@ -3,17 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/plots/daily_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/daily_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/plots/initial_visuals.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/initial_visuals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/plots/user_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/user_tweets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -24,12 +21,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py">
+        <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="1207">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/plots/user_tweets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -38,25 +71,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py">
+        <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -125,11 +143,6 @@
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
         <option value="$PROJECT_DIR$/scripts/scratch.py" />
-        <option value="$PROJECT_DIR$/scripts/plots/daily_tweets.py" />
-        <option value="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" />
-        <option value="$PROJECT_DIR$/scripts/plots/initial_visuals.py" />
-        <option value="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" />
-        <option value="$PROJECT_DIR$/scripts/plots/user_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/combined_plot.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries_daily.py" />
@@ -140,15 +153,20 @@
         <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess.py" />
-        <option value="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_testing.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" />
-        <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" />
+        <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" />
+        <option value="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" />
+        <option value="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" />
+        <option value="$PROJECT_DIR$/scripts/plots/daily_tweets.py" />
+        <option value="$PROJECT_DIR$/scripts/plots/user_tweets.py" />
+        <option value="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" />
+        <option value="$PROJECT_DIR$/scripts/plots/initial_visuals.py" />
       </list>
     </option>
   </component>
@@ -179,26 +197,13 @@
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="topic_modeling" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="topic_modeling" type="462c0819:PsiDirectoryNode" />
-              <item name="gensim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="topic_modeling" type="462c0819:PsiDirectoryNode" />
-              <item name="sklearn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
-              <item name="visuals" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -485,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543859719543</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added some annotations to scripts">
+      <created>1543865223755</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1543865223755</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -541,7 +553,8 @@
     <MESSAGE value="Reorganized directory structure and updated paths." />
     <MESSAGE value="Added initial set-up for visualizing sentiment by topic." />
     <MESSAGE value="Added csv file and script for D3 streamgraph." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added csv file and script for D3 streamgraph." />
+    <MESSAGE value="Added some annotations to scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some annotations to scripts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tweets/tweets_clean.csv">
@@ -619,53 +632,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="185" column="22" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/user_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/combined_plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-339">
@@ -802,26 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="55" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -856,9 +802,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_LDA_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="476">
           <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
@@ -866,23 +829,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py">
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="238">
+          <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py">
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="2125">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#24#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/user_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

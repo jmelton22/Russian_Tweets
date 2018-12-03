@@ -20,7 +20,8 @@ doc_topics = pd.read_csv('../../topic_modeling_objects/topics_per_doc_LDA.csv',
 tweets = pd.concat([tweets['date'], doc_topics['dominant_topic']], axis=1)
 
 # Count the number of tweets posted per topic per month
-topics_per_month = tweets.groupby([tweets.date.dt.year, tweets.date.dt.month, tweets.dominant_topic]).size().to_frame('counts')
+topics_per_month = tweets.groupby([tweets.date.dt.year, tweets.date.dt.month,
+                                   tweets.dominant_topic]).size().to_frame('counts')
 topics_per_month.index.rename(['year', 'month'], level=[0, 1], inplace=True)
 
 topics_per_month = topics_per_month.unstack(level=2, fill_value=0)

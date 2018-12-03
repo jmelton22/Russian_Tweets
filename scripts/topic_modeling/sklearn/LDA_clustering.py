@@ -3,7 +3,9 @@
 import joblib
 import pandas as pd
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation, TruncatedSVD
@@ -42,7 +44,7 @@ colors = ['#E53935', '#0288D1', '#8E24AA', '#00796B', '#689F38',
           '#D81B60', '#5E35B1', '#AFB42B', '#FBC02D', '#90A4AE',
           '#F57C00', '#1976D2', '#3949AB', '#0097A7', '#8D6E63']
 
-# Build 1D Singluar Value Decomposition (SVD) model
+# Build 1D Singular Value Decomposition (SVD) model
 svd_model = TruncatedSVD(n_components=1)
 lda_output_svd = svd_model.fit_transform(lda_W)
 
@@ -65,7 +67,7 @@ for lh in leg.legendHandles:
 
 fig1.savefig('../../../visuals/LDA_topic_clusters_1D.png')
 
-# Build 2D Singluar Value Decomposition (SVD) model
+# Build 2D Singular Value Decomposition (SVD) model
 svd_model = TruncatedSVD(n_components=2)
 lda_output_svd = svd_model.fit_transform(lda_W)
 
