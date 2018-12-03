@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/data_for_d3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="731">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -28,14 +28,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="242">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/data_for_d3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -103,7 +121,6 @@
         <option value="$PROJECT_DIR$/scripts/topic_stats.py" />
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
-        <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
         <option value="$PROJECT_DIR$/scripts/scratch.py" />
         <option value="$PROJECT_DIR$/scripts/plots/daily_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" />
@@ -128,12 +145,13 @@
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
+        <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="978" />
+    <option name="width" value="977" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -142,17 +160,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
-              <item name="results_csv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
@@ -165,11 +179,16 @@
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="topic_modeling" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +216,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sentiment_visuals">
+  <component name="RunManager" selected="Python.data_for_d3">
     <configuration name="cross_validation_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -211,6 +230,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_for_d3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Russian_Tweets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/data_for_d3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,6 +282,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_for_d3" />
         <item itemvalue="Python.sentiment_visuals" />
         <item itemvalue="Python.cross_validation_results" />
         <item itemvalue="Python.cross_validation_results" />
@@ -392,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543700849976</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added initial set-up for visualizing sentiment by topic.">
+      <created>1543786675597</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1543786675597</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -408,12 +456,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18241903" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21083939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41286862" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34986594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39812332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -446,7 +494,8 @@
     <MESSAGE value="Added additional stop words and re-ran LDA model. Updated notebooks" />
     <MESSAGE value="Added sentiment analysis script and results" />
     <MESSAGE value="Reorganized directory structure and updated paths." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganized directory structure and updated paths." />
+    <MESSAGE value="Added initial set-up for visualizing sentiment by topic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added initial set-up for visualizing sentiment by topic." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tweets/tweets_clean.csv">
@@ -460,13 +509,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/words_per_topic_LDA.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visuals/cv_scores.png">
@@ -490,13 +539,13 @@
     <entry file="file://$PROJECT_DIR$/scripts/stop_word_test.py" />
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py" />
     <entry file="file://$PROJECT_DIR$/results_csv/docs_per_topic_LDA.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/topics_per_doc_LDA.csv">
@@ -513,10 +562,10 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/cv_results_df.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/visuals/topics_kde.png">
       <provider selected="true" editor-type-id="images" />
@@ -531,13 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/data_for_d3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -625,13 +667,6 @@
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -776,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="731">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
@@ -786,11 +821,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="242">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/data_for_d3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
