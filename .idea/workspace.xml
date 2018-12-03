@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/daily_mean_sentiment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/daily_mean_subjectivity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/monthly_mean_sentiment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visuals/monthly_mean_subjectivity.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/plots/daily_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/daily_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/plots/initial_visuals.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/initial_visuals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/monthly_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/plots/user_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/plots/user_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/topic_modeling/sklearn/LDA_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results_csv/tweet_sentiments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results_csv/tweet_sentiments.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_daily_visuals.py" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -22,59 +22,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/plots/user_tweets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-              <folding>
-                <element signature="e#24#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
+        <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#24#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_daily_visuals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="56" column="80" selection-start-line="56" selection-start-column="80" selection-end-line="56" selection-end-column="80" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,12 +80,14 @@
       <find>yet</find>
       <find>get</find>
       <find>df</find>
+      <find>monthly_tweets</find>
     </findStrings>
     <replaceStrings>
       <replace>monthly_tweets</replace>
       <replace>tweets_df</replace>
       <replace>hashtags_to_plot</replace>
       <replace>topic_sentiment</replace>
+      <replace>monthly_sentiment</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -116,9 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/sklearn_gensim_test.py" />
-        <option value="$PROJECT_DIR$/scripts/sklearn_NMF_model.py" />
-        <option value="$PROJECT_DIR$/scripts/sklearn_LDA_testing.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_LDA_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_LDA_model.py" />
         <option value="$PROJECT_DIR$/scripts/sklearn_NMF_pipeline.py" />
@@ -143,7 +121,6 @@
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
         <option value="$PROJECT_DIR$/scripts/scratch.py" />
-        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/combined_plot.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/LDA_timeseries_daily.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn_gensim_test.py" />
@@ -151,7 +128,6 @@
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_model.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/sklearn_NMF_pipeline.py" />
         <option value="$PROJECT_DIR$/scripts/data_for_d3.py" />
-        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
         <option value="$PROJECT_DIR$/scripts/preprocess.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/topic_stats.py" />
         <option value="$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py" />
@@ -167,13 +143,18 @@
         <option value="$PROJECT_DIR$/scripts/plots/user_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/plots/hashtag_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/plots/initial_visuals.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_analysis.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_daily_visuals.py" />
+        <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1090" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,7 +184,18 @@
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="topic_modeling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="visuals" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,8 +229,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sentiment_visuals">
-    <configuration name="cross_validation_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sentiment_monthly_visuals">
+    <configuration name="sentiment_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,11 +238,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/topic_modeling/sklearn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/sentiment_analysis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/topic_modeling/sklearn/cross_validation_results.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -259,7 +251,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data_for_d3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sentiment_daily_visuals" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Russian_Tweets" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -267,11 +259,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/sentiment_analysis" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/data_for_d3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_daily_visuals.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sentiment_monthly_visuals" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Russian_Tweets" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/sentiment_analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,7 +305,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py" />
+      <option name="SCRIPT_NAME" value="D:\jmelt\Documents\UNCC\ITIS4510\Russian_Tweets\scripts\sentiment_analysis\sentiment_daily_visuals.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,11 +337,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sentiment_monthly_visuals" />
+        <item itemvalue="Python.sentiment_daily_visuals" />
         <item itemvalue="Python.sentiment_visuals" />
+        <item itemvalue="Python.sentiment_analysis" />
         <item itemvalue="Python.topic_stats" />
-        <item itemvalue="Python.data_for_d3" />
-        <item itemvalue="Python.cross_validation_results" />
-        <item itemvalue="Python.cross_validation_results" />
       </list>
     </recent_temporary>
   </component>
@@ -497,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543865223755</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added annotations to scripts">
+      <created>1543875657132</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1543875657133</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -513,12 +533,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083939" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498" visible="true" weight="0.20885658" />
+      <window_info id="Structure" order="1" sideWeight="0.502" side_tool="true" weight="0.21083939" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.23592493" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20241287" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39812332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,19 +574,10 @@
     <MESSAGE value="Added initial set-up for visualizing sentiment by topic." />
     <MESSAGE value="Added csv file and script for D3 streamgraph." />
     <MESSAGE value="Added some annotations to scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some annotations to scripts" />
+    <MESSAGE value="Added annotations to scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added annotations to scripts" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tweets/tweets_clean.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="3112" column="19" lean-forward="true" selection-start-line="3112" selection-start-column="19" selection-end-line="3112" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/words_per_topic_LDA.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="272">
@@ -737,37 +748,7 @@
     <entry file="file://$PROJECT_DIR$/visuals/tweets_boxplot.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_visuals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scratch.py" />
-    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/gensim/LDA_model_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -849,20 +830,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
+    <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#24#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
+    <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="205">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
@@ -879,20 +857,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/hashtag_tweets.py">
+    <entry file="file://$PROJECT_DIR$/scripts/plots/daily_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="408">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/plots/initial_visuals.py">
+    <entry file="file://$PROJECT_DIR$/scripts/preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_analysis.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_daily_visuals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="56" column="80" selection-start-line="56" selection-start-column="80" selection-end-line="56" selection-end-column="80" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/plots/monthly_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
