@@ -15,6 +15,15 @@ import spacy
 import gensim
 import gensim.corpora as corpora
 
+"""
+
+Migrated to using sklearn for topic modeling, gensim modeling is incomplete
+
+Better to use the 'lemmas' column in tweets_clean.csv
+(Generated from an updated preprocessing and lemmatization step from preprocess.py)
+
+"""
+
 tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
@@ -46,10 +55,23 @@ def lemmatization(texts, allowed_postags=('NOUN', 'ADJ', 'VERB', 'ADV')):
 tweet_lemmas = lemmatization(tweet_text)
 tweet_text_df['lemmas'] = [' '.join(words) for words in tweet_lemmas]
 
-# Save tweet lemmas to pickle file
-with open('../../../topic_modeling_objects/lemmas.pkl', 'wb') as f_out:
-    pickle.dump(tweet_lemmas, f_out)
+"""
 
+** Start here **
+
+"""
+
+# Load in file containing tweets, drop rows with NaN
+tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
+                     header=0,
+                     parse_dates=['date'])
+tweets.dropna(subset=['lemmas'], inplace=True)
+tweets.reset_index(drop=True, inplace=True)
+
+# Get the lemmatized tweets as a list
+tweet_lemmas = tweets['lemmas'].tolist()
+
+# From the lemmatized tweets, generate a gensim Dictionary and corpus to use in LDA model
 print('Making Dictionary')
 id2word = corpora.Dictionary(tweet_lemmas)
 # Save Dictionary to pickle file
@@ -61,5 +83,3 @@ corpus = [id2word.doc2bow(tweet) for tweet in tweet_lemmas]
 # Save corpus to pickle file
 with open('../../../topic_modeling_objects/corpus.pkl', 'wb') as f_out:
     pickle.dump(corpus, f_out)
-
-# tweet_text_df.to_csv('../../../tweets/tweets_text.csv', index=False)

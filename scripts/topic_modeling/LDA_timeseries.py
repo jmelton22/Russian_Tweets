@@ -5,23 +5,27 @@ import numpy as np
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource
 
+# Read in tweets file, drop rows with NaNs
 tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
 tweets.dropna(subset=['lemmas'], inplace=True)
 tweets.reset_index(drop=True, inplace=True)
 
+# Read in file with topic probabilities per tweet
 doc_topics = pd.read_csv('../../topic_modeling_objects/topics_per_doc_LDA.csv',
                          header=0)
 
+# Extract the date and dominant topic of each tweet to a new df
 tweets = pd.concat([tweets['date'], doc_topics['dominant_topic']], axis=1)
 
+# Count the number of tweets posted per topic per month
 topics_per_month = tweets.groupby([tweets.date.dt.year, tweets.date.dt.month, tweets.dominant_topic]).size().to_frame('counts')
 topics_per_month.index.rename(['year', 'month'], level=[0, 1], inplace=True)
 
 topics_per_month = topics_per_month.unstack(level=2, fill_value=0)
 
-# Collapse index back into a single date
+# Collapse the index back into a single date
 topics_per_month.columns = topics_per_month.columns.droplevel(0)
 topics_per_month.reset_index(inplace=True)
 topics_per_month['date'] = pd.to_datetime(dict(year=topics_per_month.year,
@@ -32,6 +36,13 @@ topics_per_month.columns = topics_per_month.columns.values.astype('str')
 
 
 def monthly_topics(tweets_df, out_file='../../visuals/monthly_topics.html'):
+    """
+    Function to generate a stacked bar plot for the count of tweets by month and topic
+
+    :param tweets_df: dataframe with date index and columns containing counts of tweets per topic
+    :param out_file: path to file to save plot
+    :return: bokeh plot
+    """
     topics = [str(i) for i in range(15)]
 
     palette = ['#E53935', '#0288D1', '#8E24AA', '#00796B', '#689F38',
@@ -70,9 +81,11 @@ def monthly_topics(tweets_df, out_file='../../visuals/monthly_topics.html'):
     return p
 
 
+# Convert counts of tweets per topic to proportions
 monthly_props = topics_per_month.drop('date', axis=1).apply(lambda x: 100. * x / x.sum(), axis=1)
 monthly_props['date'] = topics_per_month['date']
 
+# Plot the stacked bar plot with counts and the stacked bar plot with proportions
 topics_plot = monthly_topics(topics_per_month)
 show(topics_plot)
 topics_prop_plot = monthly_topics(monthly_props, out_file='../../visuals/monthly_topics_prop.html')
@@ -85,6 +98,13 @@ monthly_props.set_index('date', inplace=True)
 
 
 def stacked_area(tweets_df, out_file='../../visuals/topic_stacked_area.html'):
+    """
+    Function to generate a stacked area plot for the count of tweets by month and topic
+
+    :param tweets_df: dataframe with date index and columns containing counts of tweets per topic
+    :param out_file: path to file to save plot
+    :return: bokeh plot
+    """
     topics = [str(i) for i in range(15)]
 
     def stacked(df):
@@ -133,6 +153,7 @@ def stacked_area(tweets_df, out_file='../../visuals/topic_stacked_area.html'):
     return p
 
 
+# Plot the stacked area plot with counts and the stacked area plot with proportions
 area_plot = stacked_area(topics_per_month)
 show(area_plot)
 

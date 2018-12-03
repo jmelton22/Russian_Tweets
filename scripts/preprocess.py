@@ -106,6 +106,7 @@ def lemmatization(texts, allowed_postags=('NOUN', 'ADJ', 'VERB', 'ADV')):
     return lemmas
 
 
+# Lemmatize tweets
 tweet_lemmas = lemmatization(tweet_text)
 tweets['lemmas'] = [' '.join(words) for words in tweet_lemmas]
 tweets.dropna(subset=['lemmas'], inplace=True)

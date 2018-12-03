@@ -8,12 +8,14 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation, TruncatedSVD
 
+# Read in file with tweets, drop rows with NaN
 tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
 tweets.dropna(subset=['lemmas'], inplace=True)
+tweets.reset_index(drop=True, inplace=True)
 
-# Load vectorizer
+# Load count vectorizer
 with open('../../../topic_modeling_objects/sklearn_vect.joblib', 'rb') as f:
     cv = joblib.load(f)
 
@@ -29,9 +31,10 @@ with open('../../../topic_modeling_objects/sklearn_feature_names.joblib', 'rb') 
 with open('../../../topic_modeling_objects/sklearn_LDA_model.joblib', 'rb') as f:
     lda_model = joblib.load(f)
 
+# Generate topic to document matrix (W)
 lda_W = lda_model.transform(tf)
 
-# Construct k-means clusters
+# Construct k-means clusters model
 clusters = KMeans(n_clusters=15,
                   random_state=100).fit_predict(lda_W)
 
@@ -47,6 +50,7 @@ x = lda_output_svd[:, 0]
 print('Component\'s weights:\n', np.round(svd_model.components_, 2))
 print('Percent variance explained:\n', np.round(svd_model.explained_variance_ratio_, 2))
 
+# Plot 1D SVD clustering of topics
 fig1 = plt.figure(figsize=(12, 12))
 for topic, color in zip(np.unique(clusters), colors):
     i = np.where(clusters == topic)
@@ -71,6 +75,7 @@ y = lda_output_svd[:, 1]
 print('Component\'s weights:\n', np.round(svd_model.components_, 2))
 print('Percent variance explained:\n', np.round(svd_model.explained_variance_ratio_, 2))
 
+# Plot 2D SVD clustering of topics
 fig2 = plt.figure(figsize=(12, 12))
 for topic, color in zip(np.unique(clusters), colors):
     i = np.where(clusters == topic)

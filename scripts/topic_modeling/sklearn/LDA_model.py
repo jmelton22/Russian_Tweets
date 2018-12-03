@@ -3,15 +3,18 @@
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.feature_extraction.text import CountVectorizer
 
+# Read in file of tweets, drop rows with NaN
 tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
                      header=0,
                      parse_dates=['date'])
-tweet_docs = tweets.lemmas.tolist()
-tweet_orig = tweets.text.tolist()
+tweets.dropna(subset=['lemmas'], inplace=True)
+tweets.reset_index(drop=True, inplace=True)
 
-# Load vectorizer
+tweet_docs = tweets.lemmas.tolist()  # Original tweets text as list
+tweet_orig = tweets.text.tolist()  # Lemmatized tweets as list
+
+# Load fitted count vectorizer
 with open('../../../topic_modeling_objects/sklearn_vect.joblib', 'rb') as f:
     cv = joblib.load(f)
 
@@ -34,6 +37,16 @@ lda_H = lda_model.components_
 
 
 def display_topics(H, W, feature_names, orig_docs, n_words=15, n_docs=25):
+    """
+    Function to print the top words and top tweets for each topic
+
+    :param H: Topic to document matrix
+    :param W: Word to topics matrix
+    :param feature_names: English term names
+    :param orig_docs: Original tweet texts
+    :param n_words: Number of top words to print
+    :param n_docs: Number of top tweets to print
+    """
     for i, topic in enumerate(H):
         print('Topic {}: '.format(i) + ' '.join([feature_names[word]
                                                  for word in topic.argsort()[: (-n_words - 1): -1]]))

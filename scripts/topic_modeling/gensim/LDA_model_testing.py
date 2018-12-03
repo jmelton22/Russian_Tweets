@@ -6,6 +6,7 @@ with warnings.catch_warnings():
     import imp
 warnings.simplefilter('ignore')
 
+import pandas as pd
 from pprint import pprint
 import pickle
 
@@ -15,9 +16,21 @@ from gensim.models import CoherenceModel
 
 import matplotlib.pyplot as plt
 
-# Load lemmatized tweets
-with open('../../../topic_modeling_objects/lemmas.pkl', 'rb') as f:
-    tweet_lemmas = pickle.load(f)
+"""
+
+Migrated to using sklearn for topic modeling, gensim modeling is incomplete
+
+"""
+
+# Load lemmatized tweets, drop rows with NaN
+tweets = pd.read_csv('../../../tweets/tweets_clean.csv',
+                     header=0,
+                     parse_dates=['date'])
+tweets.dropna(subset=['lemmas'], inplace=True)
+tweets.reset_index(drop=True, inplace=True)
+
+# Get lemmatized tweets as list
+tweet_lemmas = tweets.lemmas.tolist()
 
 # Load gensim dictionary
 id2word = corpora.Dictionary.load('../../../topic_modeling_objects/dictionary.pkl')
@@ -26,25 +39,25 @@ id2word = corpora.Dictionary.load('../../../topic_modeling_objects/dictionary.pk
 with open('../../../topic_modeling_objects/corpus.pkl', 'rb') as f:
     corpus = pickle.load(f)
 
-# readable_corpus = [[(id2word[i], freq) for i, freq in cp] for cp in corpus]
-
-
+# For parallel processing (on Windows), branching point has to be within a "main" function
 if __name__ == "__main__":
 
     def score_models(dictionary, corpus, texts, limit, start=2, step=4):
         """
-        Compute c_v coherence scores and log perplexity values for LDA models with various numbers of topics
+        Compute coherence scores and log perplexity values for LDA models with various numbers of topics
 
         :param dictionary: Gensim dictionary
         :param corpus: Gensim corpus
-        :param texts: List of input texts
+        :param texts: List of input lemmatized texts
         :param limit: Max num of topics
         :return:
-            model_list: List of LDA topic models
+            model_list: List containing the LDA models
             coherences: Coherence values for each LDA model by number of topics
-            log_perplexities: Log perplexity valuess for each LDA model by number of topics
+            log_perplexities: Log perplexity values for each LDA model by number of topics
         """
         model_list, coherence_list, log_perplexity_list = [], [], []
+
+        # Loop through each number of topics, fit and score an LDA model for passed number of topics
         for num_topics in range(start, limit, step):
             print('Fitting LDA model with {} topics'.format(num_topics))
             model = gensim.models.ldamodel.LdaModel(corpus=corpus,
@@ -68,6 +81,7 @@ if __name__ == "__main__":
 
         return model_list, coherence_list, log_perplexity_list
 
+    # Run scoring function with tweet data, adjust topics range as needed
     models, coherences, log_perplexities = score_models(dictionary=id2word,
                                                         corpus=corpus,
                                                         texts=tweet_lemmas,
@@ -75,6 +89,7 @@ if __name__ == "__main__":
                                                         limit=50,
                                                         step=5)
 
+    # Generate a plot with the Coherence scores and log perplexity scores for the model
     start, limit, step = 5, 50, 5
     x = range(start, limit, step)
 
@@ -100,11 +115,12 @@ if __name__ == "__main__":
 
     plt.show()
 
+    # Print the number of topics, coherence score, and log perplexity score for each test model
     for m, c, p in zip(x, coherences, log_perplexities):
         print('Num topics {}\nCoherence score = {:.4f}\nLog perplexity = {:.4f}'.format(m, c, p))
         print()
 
-    # Select optimal model
+    # Select optimal model (selects the "best" score, probably not the actual most reasonable model)
     optimal_model = models[coherences.index(max(coherences))]
     model_topics = optimal_model.show_topics()
     pprint(model_topics)

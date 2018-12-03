@@ -20,19 +20,21 @@ sentiments = pd.read_csv('../../results_csv/tweet_sentiments.csv',
 topic_sentiment = pd.concat([topics['topic'], sentiments], axis=1)
 topic_sentiment.set_index(tweets['date'], inplace=True)
 
-topic_sentiment['polarity_cat'] = np.where(topic_sentiment['polarity'] > 0, 'pos',
-                                           np.where(topic_sentiment['polarity'] < 0, 'neg', 'neut'))
+topic_sentiment['polarity_cat'] = np.where(topic_sentiment['polarity'] > 0.1, 'pos',
+                                           np.where(topic_sentiment['polarity'] < -0.1, 'neg', 'neut'))
 
 topic_sentiment = topic_sentiment.groupby([topic_sentiment['topic'],
-                                           topic_sentiment['polarity_cat']]).agg(['mean', 'std'])
+                                           topic_sentiment['polarity_cat']]).agg(['count', 'mean', 'std'])['polarity']
 
 sentiments.set_index(tweets['date'], inplace=True)
 sentiments['polarity_cat'] = np.where(sentiments['polarity'] > 0, 'pos',
                                       np.where(sentiments['polarity'] < 0, 'neg', 'neut'))
 
-test = sentiments.groupby([sentiments.index.date, sentiments['polarity_cat']])[['polarity', 'polarity_cat']]
+daily_sentiment = sentiments.groupby([sentiments.index.date, sentiments['polarity_cat']]).mean()['polarity'].unstack(level=1)
 
-test.plot()
+fig = daily_sentiment.plot()
+
+fig.get_figure().savefig('../../visuals/daily_mean_sentiment.png')
 plt.show()
 
 # topic_sentiment.boxplot()
@@ -40,10 +42,10 @@ plt.show()
 
 # topic_sentiment = topic_sentiment.unstack()
 #
-# print(topic_sentiment.head(20))
-
-# topic_polarity = topic_sentiment.groupby('dominant_topic')['polarity'].agg([('negative', lambda x: x[x < 0].count()),
-#                                                                             ('neutral', lambda x: x[x == 0].count()),
-#                                                                             ('positive', lambda x: x[x > 0].count())])
+# # print(topic_sentiment.head(20))
+#
+# topic_polarity = topic_sentiment.groupby('topic')['polarity'].agg([('negative', lambda x: x[x < 0].count()),
+#                                                                     ('neutral', lambda x: x[x == 0].count()),
+#                                                                     ('positive', lambda x: x[x > 0].count())])
 # topic_polarity.loc['total'] = topic_polarity.sum()
 # print(topic_polarity)

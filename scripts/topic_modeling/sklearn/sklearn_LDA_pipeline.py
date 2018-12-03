@@ -3,15 +3,21 @@
 import pandas as pd
 from pprint import pprint
 from time import time
+
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
-tweet_text = pd.read_csv('../../../tweets/tweets_clean.csv', header=0)
+# Load in file containing tweets, drop rows with NaN
+tweets = pd.read_csv('../../../tweets/tweets_clean.csv', header=0)
+tweets.dropna(subset=['lemmas'], inplace=True)
+tweets.reset_index(drop=True, inplace=True)
 
-tweet_docs = tweet_text.lemmas.tolist()
+# Extract lemmatized tweets as list
+tweet_docs = tweets.lemmas.tolist()
 
+# Create a Pipeline for testing various parameters of the count vectorizer and LDA model
 pipeline = Pipeline([('vect', CountVectorizer(max_df=0.95,
                                               min_df=100)),
                      ('lda', LatentDirichletAllocation(max_iter=10,
@@ -23,7 +29,9 @@ params = {'lda__learning_decay': (0.5, 0.7, 0.9),
           # 'vect__min_df': (0, 10, 100)
           }
 
+# For parallel processing (on Windows), branching point has to be within a "main" function
 if __name__ == '__main__':
+    # Perform grid search cross-validation on tweet data to test and score models with passed parameters
     grid_search = GridSearchCV(pipeline, params,
                                cv=5, n_jobs=-1, verbose=2)
     print('Performing grid search')
@@ -42,4 +50,5 @@ if __name__ == '__main__':
     for k, v in best_params.items():
         print('{}: {}'.format(k, v))
 
+    # Save the results of cross validation to a csv file
     pd.DataFrame(grid_search.cv_results_).to_csv('../../../results_csv/cv_results_df.csv', index=False)
