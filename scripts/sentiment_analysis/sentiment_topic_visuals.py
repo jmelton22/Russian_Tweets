@@ -34,12 +34,29 @@ topic_sentiment = pd.concat([topics['topic'], sentiments], axis=1)
 topic_sentiment.set_index(tweets['date'], inplace=True)
 
 # Create a categorical column that separates tweets into positive, neutral, or negative categories
-topic_sentiment['polarity_cat'] = np.where(topic_sentiment['polarity'] > 0.1, 'pos',
-                                           np.where(topic_sentiment['polarity'] < -0.1, 'neg', 'neut'))
+topic_sentiment['polarity_cat'] = np.where(topic_sentiment['polarity'] > 0.1, 'Positive',
+                                           np.where(topic_sentiment['polarity'] < -0.1, 'Negative', 'Neutral'))
 
 # Group tweets by their topic and sentiment category
 # Count the number of tweets and the mean and standard deviation of the sentiment polarity
 topic_sentiment = topic_sentiment.groupby([topic_sentiment['topic'],
                                            topic_sentiment['polarity_cat']]).agg(['count', 'mean', 'std'])['polarity']
 
-print(topic_sentiment.head(25))
+fig = topic_sentiment.unstack()['count'].plot(kind='bar',
+                                              figsize=(16, 10),
+                                              rot=0,
+                                              title='Number of Tweets per Topic by Sentiment Polarity',
+                                              fontsize=12)
+fig.legend(title='Category', frameon=True, fontsize=11)
+fig.set_xlabel('Topic', fontsize=12)
+fig.set_ylabel('Number of tweets', fontsize=12)
+
+fig = topic_sentiment.unstack()['mean'].plot(kind='barh',
+                                             figsize=(16, 10),
+                                             rot=0,
+                                             title='Mean Polarity of Tweets by Topic')
+fig.legend(title='Category', frameon=True)
+fig.set_xlabel('Polarity')
+fig.set_ylabel('Topic')
+
+plt.show()

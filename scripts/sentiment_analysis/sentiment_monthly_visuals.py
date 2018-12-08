@@ -55,7 +55,7 @@ plt.ylabel('Sentiment Polarity')
 
 fig1.get_figure().savefig('../../visuals/monthly_mean_sentiment.png')
 
-# Plot the daily mean subjectivity of tweets by sentiment category
+# Plot the monthly mean subjectivity of tweets by sentiment category
 fig2 = monthly_sentiment['subjectivity'].plot(figsize=(12, 8),
                                               use_index=True,
                                               style='.-',

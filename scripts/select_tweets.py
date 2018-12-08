@@ -2,16 +2,20 @@
 
 import pandas as pd
 
+# Read in tweets, drop rows with NaN
 tweets = pd.read_csv('../tweets/tweets_clean.csv', header=0,
                      parse_dates=['date'])
 tweets.dropna(subset=['lemmas'], inplace=True)
 tweets.reset_index(drop=True, inplace=True)
 
+# Read in topic probabilities per doc
 topics = pd.read_csv('../results_csv/topics_per_doc_LDA.csv', header=0, index_col=0)
 topics.reset_index(drop=True, inplace=True)
 
+# Add row with probability for dominant topic
 topics['prob'] = topics.drop('dominant_topic', axis=1).max(axis=1)
 
+# Concat tweets with dominant_topic and probability columns
 tweets = pd.concat([tweets, topics[['dominant_topic', 'prob']]], axis=1)
 tweets.set_index('date', inplace=True)
 
