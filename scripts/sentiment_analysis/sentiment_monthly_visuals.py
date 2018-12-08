@@ -5,9 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # TODO: Replace matplotlib plot with interactive bokeh plot
-# TODO: Visualizations of sentiment per topic
-
-# TODO: move legend outside of plot
 
 plt.style.use('seaborn-whitegrid')
 

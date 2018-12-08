@@ -25,8 +25,6 @@ sentiments.set_index(tweets['date'], inplace=True)
 sentiments['polarity_cat'] = np.where(sentiments['polarity'] > 0.1, 'Positive',
                                       np.where(sentiments['polarity'] < -0.1, 'Negative', 'Neutral'))
 
-# TODO: Visualizations of sentiment per topic (over time?)
-
 # Create new df with the dominant topic and sentiment for each tweet
 # Set tweets' dates as df index
 sentiments.reset_index(drop=True, inplace=True)  # Reset index for concatenation

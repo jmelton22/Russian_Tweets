@@ -25,7 +25,7 @@ def select_tweets(day, topic):
     print('{}: {}'.format(day, topic))
 
     subset = day_tweets[day_tweets['dominant_topic'] == topic][['text', 'prob']].sort_values('prob', ascending=False)
-    for i, row in subset.iterrows():
+    for _, row in subset.iterrows():
         print(row['prob'], repr(row['text']))
 
 
