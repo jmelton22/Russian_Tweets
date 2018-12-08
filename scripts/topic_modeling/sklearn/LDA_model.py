@@ -57,7 +57,7 @@ def display_topics(H, W, feature_names, orig_docs, n_words=15, n_docs=25):
         print('-' * 80)
 
 
-display_topics(lda_H, lda_W, tf_names, tweet_orig, n_words=20)
+display_topics(lda_H, lda_W, tf_names, tweet_orig, n_words=20, n_docs=50)
 
 topic_names = ['Topic' + str(i) for i in range(len(lda_model.components_))]
 doc_names = ['Doc' + str(i) for i in range(len(tweet_docs))]

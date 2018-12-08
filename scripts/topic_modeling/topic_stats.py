@@ -51,6 +51,8 @@ fig.savefig('../../visuals/tweets_prop_boxplot.png')
 print(topics_daily_props.idxmax())
 """
 Topic 0: 2016-10-04: https://en.wikipedia.org/wiki/Portal:Current_events/2016_October_4
+    - Hurricane Matthew
+    - Vice Presidential Debate
 Topic 1: 2016-05-12: https://en.wikipedia.org/wiki/Portal:Current_events/2016_May_12
 Topic 2: 2016-05-08: https://en.wikipedia.org/wiki/Portal:Current_events/2016_May_8
 Topic 3: 2015-12-16: https://en.wikipedia.org/wiki/Portal:Current_events/2015_December_16
@@ -80,9 +82,11 @@ fig.savefig('../../visuals/tweets_boxplot.png')
 print(topics_daily.idxmax())
 """
 Topic 0: 2016-10-06: https://en.wikipedia.org/wiki/Portal:Current_events/2016_October_6
+    - Hurricane Matthew
 Topic 1: 2016-11-08: https://en.wikipedia.org/wiki/Portal:Current_events/2016_November_8
     - US Election
 Topic 2: 2016-12-21: https://en.wikipedia.org/wiki/Portal:Current_events/2016_December_21
+    - Berlin van attack
 Topic 3: 2016-10-06: https://en.wikipedia.org/wiki/Portal:Current_events/2016_October_6
 Topic 4: 2016-09-18: https://en.wikipedia.org/wiki/Portal:Current_events/2016_September_18
 Topic 5: 2016-12-14: https://en.wikipedia.org/wiki/Portal:Current_events/2016_December_14

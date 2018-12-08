@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+plt.style.use('seaborn-whitegrid')
+
 # Read in file with tweets, drop rows with NaN
 tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
@@ -32,6 +34,7 @@ daily_sentiment = sentiments.groupby([sentiments.index.date,
 # Plot the daily mean polarity of tweets by sentiment category
 fig1 = daily_sentiment['polarity'].plot(figsize=(12, 8),
                                         use_index=True,
+                                        style='.-',
                                         title='Mean Polarity Score of Daily Tweet Sentiment')
 fig1.legend(title='Category')
 plt.xlabel('Date')
@@ -42,6 +45,7 @@ fig1.get_figure().savefig('../../visuals/daily_mean_sentiment.png')
 # Plot the daily mean subjectivity of tweets by sentiment category
 fig2 = daily_sentiment['subjectivity'].plot(figsize=(12, 8),
                                             use_index=True,
+                                            style='.-',
                                             title='Mean Subjectivity Score of Daily Tweet Sentiment')
 fig2.legend(title='Category')
 plt.xlabel('Date')
@@ -49,20 +53,3 @@ plt.ylabel('Sentiment Subjectivity')
 
 fig2.get_figure().savefig('../../visuals/daily_mean_subjectivity.png')
 plt.show()
-
-# TODO: Visualizations of sentiment per topic (over time?)
-
-# Create new df with the dominant topic and sentiment for each tweet
-# Set tweets' dates as df index
-sentiments.reset_index(drop=True, inplace=True)  # Reset index for concatenation
-topic_sentiment = pd.concat([topics['topic'], sentiments], axis=1)
-topic_sentiment.set_index(tweets['date'], inplace=True)
-
-# Create a categorical column that separates tweets into positive, neutral, or negative categories
-topic_sentiment['polarity_cat'] = np.where(topic_sentiment['polarity'] > 0.1, 'pos',
-                                           np.where(topic_sentiment['polarity'] < -0.1, 'neg', 'neut'))
-
-# Group tweets by their topic and sentiment category
-# Count the number of tweets and the mean and standard deviation of the sentiment polarity
-topic_sentiment = topic_sentiment.groupby([topic_sentiment['topic'],
-                                           topic_sentiment['polarity_cat']]).agg(['count', 'mean', 'std'])['polarity']

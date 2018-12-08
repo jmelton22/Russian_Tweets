@@ -16,11 +16,10 @@ monthly_tweets.index.rename(['year', 'month'], inplace=True)
 
 # Collapse index back into a single date
 monthly_tweets.reset_index(inplace=True)
-monthly_tweets['date'] = pd.to_datetime(dict(year=monthly_tweets.year,
+monthly_tweets.set_index(pd.to_datetime(dict(year=monthly_tweets.year,
                                              month=monthly_tweets.month,
-                                             day=[1] * len(monthly_tweets)))
-monthly_tweets.set_index(monthly_tweets['date'], inplace=True)
-monthly_tweets.drop(['year', 'month', 'date'], axis=1, inplace=True)
+                                             day=[1] * len(monthly_tweets))))
+monthly_tweets.drop(['year', 'month'], axis=1, inplace=True)
 
 
 def monthly_counts(tweets_df):

@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 # TODO: Replace matplotlib plot with interactive bokeh plot
 # TODO: Visualizations of sentiment per topic
 
+# TODO: move legend outside of plot
+
+plt.style.use('seaborn-whitegrid')
+
 # Read in file with tweets, drop rows with NaN
 tweets = pd.read_csv('../../tweets/tweets_clean.csv',
                      header=0,
@@ -35,15 +39,15 @@ monthly_sentiment.index.rename(['year', 'month'], inplace=True)
 
 # Collapse index back into a single date
 monthly_sentiment.reset_index(inplace=True)
-monthly_sentiment['date'] = pd.to_datetime(dict(year=monthly_sentiment.year,
+monthly_sentiment.set_index(pd.to_datetime(dict(year=monthly_sentiment.year,
                                                 month=monthly_sentiment.month,
-                                                day=[1] * len(monthly_sentiment)))
-monthly_sentiment.set_index(monthly_sentiment['date'], inplace=True)
-monthly_sentiment.drop(['year', 'month', 'date'], axis=1, inplace=True)
+                                                day=[1] * len(monthly_sentiment))))
+monthly_sentiment.drop(['year', 'month'], axis=1, inplace=True)
 
 # Plot the monthly mean polarity of tweets by sentiment category
 fig1 = monthly_sentiment['polarity'].plot(figsize=(12, 8),
                                           use_index=True,
+                                          style='.-',
                                           title='Mean Polarity Score of Monthly Tweet Sentiment')
 fig1.legend(title='Category', loc='upper left')
 plt.xlabel('Date')
@@ -54,6 +58,7 @@ fig1.get_figure().savefig('../../visuals/monthly_mean_sentiment.png')
 # Plot the daily mean subjectivity of tweets by sentiment category
 fig2 = monthly_sentiment['subjectivity'].plot(figsize=(12, 8),
                                               use_index=True,
+                                              style='.-',
                                               title='Mean Subjectivity Score of Monthly Tweet Sentiment')
 fig2.legend(title='Category')
 plt.xlabel('Date')

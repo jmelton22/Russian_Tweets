@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import HoverTool, ColumnDataSource
 
@@ -13,7 +14,7 @@ tweets.dropna(subset=['lemmas'], inplace=True)
 tweets.reset_index(drop=True, inplace=True)
 
 # Read in file with topic probabilities per tweet
-doc_topics = pd.read_csv('../../topic_modeling_objects/topics_per_doc_LDA.csv',
+doc_topics = pd.read_csv('../../results_csv/topics_per_doc_LDA.csv',
                          header=0)
 
 # Extract the date and dominant topic of each tweet to a new df
@@ -160,3 +161,28 @@ show(area_plot)
 
 area_prop_plot = stacked_area(monthly_props, out_file='../../visuals/topic_prop_stacked_area.html')
 show(area_prop_plot)
+
+
+def bar_suplots(df, props=False):
+    if props:
+        ylim = (0, 100)
+    else:
+        ylim = (0, 5500)
+
+    axes = df.plot(kind='bar', use_index=True,
+                   subplots=True, sharex=True, layout=(15, 1),
+                   figsize=(8, 20), legend=False, ylim=ylim,
+                   color=['#E53935', '#0288D1', '#8E24AA', '#00796B', '#689F38',
+                          '#D81B60', '#5E35B1', '#AFB42B', '#FBC02D', '#90A4AE',
+                          '#F57C00', '#1976D2', '#3949AB', '#0097A7', '#8D6E63'])
+
+    for i, ax in enumerate(axes.reshape(-1)):
+        ax.set_title('Topic' + str(i), fontsize=14)
+        ax.set_xticklabels([date.strftime('%B-%Y') if i % 3 == 0 else '' for i, date in enumerate(topics_per_month.index)],
+                           rotation=45, fontsize=12)
+
+    plt.show()
+
+
+bar_suplots(topics_per_month)
+bar_suplots(monthly_props, props=True)
