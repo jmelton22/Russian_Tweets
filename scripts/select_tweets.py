@@ -20,12 +20,12 @@ tweets = pd.concat([tweets, topics[['dominant_topic', 'prob']]], axis=1)
 tweets.set_index('date', inplace=True)
 
 
-def select_tweets(day, topic):
+def select_tweets(day, topic, n_tweets=25):
     day_tweets = tweets.loc[day]
     print('{}: {}'.format(day, topic))
 
     subset = day_tweets[day_tweets['dominant_topic'] == topic][['text', 'prob']].sort_values('prob', ascending=False)
-    for _, row in subset.iterrows():
+    for _, row in list(subset.iterrows())[:n_tweets]:
         print(row['prob'], repr(row['text']))
 
 
@@ -34,10 +34,6 @@ dates_list = [('2016-10-04', 0), ('2016-05-12', 1), ('2016-05-08', 2), ('2015-12
               ('2016-12-14', 5), ('2016-02-29', 6), ('2016-02-11', 7), ('2017-08-03', 8), ('2016-07-21', 9),
               ('2016-10-03', 10), ('2016-09-22', 11), ('2017-06-23', 12), ('2015-06-13', 13), ('2016-03-22', 14)]
 
-# Top dates based on count of tweets per topic
-# dates_list = [('2016-10-06', 0), ('2016-11-08', 1), ('2016-12-21', 2), ('2016-10-06', 3), ('2016-09-18', 4),
-#               ('2016-12-14', 5), ('2016-02-29', 6), ('2016-10-06', 7), ('2016-10-19', 8), ('2016-07-21', 9),
-#               ('2016-10-06', 10), ('2016-12-26', 11), ('2017-01-25', 12), ('2016-11-14', 13), ('2016-03-22', 14)]
 
 for d, top in dates_list:
     select_tweets(d, top)
