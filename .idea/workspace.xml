@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a794ae6a-cee3-44af-9586-86cddac0e185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/notebooks/user_ab.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/initial_visuals.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/sentiment_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/sentiment_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/select_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/select_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/wordcloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/visuals/wordcloud.png" afterDir="false" />
     </list>
     <ignored path="scripts/test.py" />
     <ignored path="venv/" />
@@ -19,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/select_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="3" />
             </state>
           </provider>
         </entry>
@@ -67,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/hashtag_tweets.py" />
         <option value="$PROJECT_DIR$/scripts/cross_validation_results.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_pipeline.ipynb" />
         <option value="$PROJECT_DIR$/scripts/LDA_model.py" />
@@ -118,6 +123,7 @@
         <option value="$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py" />
         <option value="$PROJECT_DIR$/scripts/select_tweets.py" />
         <option value="$PROJECT_DIR$/notebooks/LDA_visuals.ipynb" />
+        <option value="$PROJECT_DIR$/notebooks/user_ab.ipynb" />
       </list>
     </option>
   </component>
@@ -143,6 +149,11 @@
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
               <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russian_Tweets" type="462c0819:PsiDirectoryNode" />
+              <item name="results_csv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Russian_Tweets" type="b2602c69:ProjectViewProjectNode" />
@@ -503,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544302124879</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updates to select_tweets function and minor adjustments to notebooks.">
+      <created>1544555338260</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1544555338260</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -519,7 +537,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498" visible="true" weight="0.21414408" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498" visible="true" weight="0.21414408" />
       <window_info id="Structure" order="1" sideWeight="0.502" side_tool="true" weight="0.21083939" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -530,7 +548,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32885906" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29758713" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29758713" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32885906" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -539,7 +557,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean up some formatting" />
     <MESSAGE value="Fixed URL handling in text preprocessing" />
     <MESSAGE value="Added LDA model preprocess and testing" />
     <MESSAGE value="Added removal of some German tweets to preprocessing.&#10;Added sklearn topic modeling" />
@@ -564,25 +581,20 @@
     <MESSAGE value="Added a couple plots for topic modeling and script for selecting tweets&#10;on a given day for a given topic" />
     <MESSAGE value="Added sentiment analysis notebook. Added additional sentiment and topic&#10;plots." />
     <MESSAGE value="Removed some TODOs, fixed a couple typos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed some TODOs, fixed a couple typos" />
+    <MESSAGE value="Updates to select_tweets function and minor adjustments to notebooks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to select_tweets function and minor adjustments to notebooks." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visuals/wordcloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visuals/topic_stacked_area.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/stop_word_test.py" />
     <entry file="file://$PROJECT_DIR$/scripts/LDA_model_pipeline.py" />
     <entry file="file://$PROJECT_DIR$/results_csv/docs_per_topic_LDA.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/topics_per_doc_LDA.csv">
@@ -596,18 +608,13 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/results_csv/cv_results_df.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/visuals/topics_kde.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results_csv/tweet_sentiments.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-569284" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/preprocess_wordcloud.py" />
     <entry file="file://$PROJECT_DIR$/scripts/topic_modeling/combined_plot.py">
@@ -873,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/sentiment_analysis.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/sentiment_analysis/sentiment_monthly_visuals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -900,24 +900,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/results_csv/words_per_topic_LDA.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results_csv/tweet_sentiments.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/notebooks/initial_visuals.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="1" />
+          <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
+    <entry file="file://$PROJECT_DIR$/notebooks/user_ab.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="14" />
+          <selected id="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/sentiment_analysis.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/select_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebooks/LDA_visuals.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
         </state>
       </provider>
     </entry>
